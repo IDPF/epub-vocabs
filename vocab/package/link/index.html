@@ -190,27 +190,11 @@
 			</dl>
 			
 			<dl id="xml-signature">
-				<dt><span class="property">xml-signature</span></dt>
+				<dt><span class="property">xml-signature</span> <span class="status deprecated">[DEPRECATED]</span></dt>
 				<dd>
-					<p>The <span class="property">xml-signature</span> keyword indicates the referenced
-						resource contains an XML Signature <a href="#refXMLDSIGCORE"
-								>[<abbr>XML DSIG Core</abbr>]</a> for the <a
-							href="http://www.idpf.org/epub3/latest/#gloss-epub-publication"
-							>EPUB Publication</a>.</p>
-					<p>The <a 
-							href="http://www.idpf.org/epub3/latest/packages#attrdef-link-href"><code>href</code> attribute</a>
-						<a href="#refPackages3">[Packages3]</a> typically references a specific <code>signature</code> element in the <a
-							href="http://www.idpf.org/epub3/latest/ocf/#sec-container-metainf-signatures.xml"
-								><code class="filename">signatures.xml</code> file</a>
-						<a href="#refOCF3">[<abbr>OCF3</abbr>]</a> via a fragment
-						identifier.</p>
-				</dd>
-				<dt>Cardinality:</dt>
-				<dd>Zero or more</dd>
-				<dt>Example:</dt>
-				<dd>
-					<code class="example">&lt;link rel="xml-signature"
-						href="../META-INF/signatures.xml#MAI-Signature"/&gt;</code>
+					<p>Use of the <span class="property">xml-signature</span> keyword is deprecated. It is not replaced
+						by another linking method. Identification of XML signatures will be addressed in a future version
+						of EPUB.</p>
 				</dd>
 			</dl>
 			
