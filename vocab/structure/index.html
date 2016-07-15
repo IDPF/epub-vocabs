@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-      xmlns:role="http://www.w3.org/1999/xhtml/vocab#"
-      xmlns:htu="http://www.daisy.org/ns/rdf/usage/html/#"
-      xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:owl="http://www.w3.org/2002/07/owl#"
-      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-      xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:role="http://www.w3.org/1999/xhtml/vocab#" xmlns:htu="http://www.daisy.org/ns/rdf/usage/html/#"
+   xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:lang="en-US">
    <head xmlns:epub="http://www.idpf.org/epub/vocab#">
-      <meta charset="utf-8"/>
-      <meta property="dcterms:creator" content="Matt Garrish"/>
-      <meta property="dcterms:creator" content="Markus Gylling"/>
-      <meta property="dcterms:publisher"
-            content="International Digital Publishing Forum (IDPF)"/>
+      <meta charset="utf-8" />
+      <meta property="dcterms:creator" content="Matt Garrish" />
+      <meta property="dcterms:creator" content="Markus Gylling" />
+      <meta property="dcterms:publisher" content="International Digital Publishing Forum (IDPF)" />
       <title>EPUB 3 Structural Semantics Vocabulary</title>
       <link rel="stylesheet" type="text/css" href="../css/vocabs.css" />
       <style>
-					dt { font-weight: bold; }
-		</style>
+         dt{
+             font-weight: bold;
+         }</style>
    </head>
    <body xmlns:epub="http://www.idpf.org/epub/vocab#">
       <header>
          <p><a href="http://www.idpf.org"><img src="http://idpf.org/sites/default/files/idpflogo_web_125.jpg" class="logo"
-            alt="IDPF" /></a></p>
+                  alt="IDPF" /></a></p>
          <h1 class="title" property="dcterms:title">EPUB 3 Structural Semantics Vocabulary</h1>
          <div class="printhistory">
             <p class="identity">
@@ -32,7 +28,8 @@
                <span class="history-title">Document history</span>
                <ul>
                   <li>
-                     <a href="https://github.com/IDPF/epub-vocabs/commits/master/vocab/structure/index.html">Changes to this document</a>
+                     <a href="https://github.com/IDPF/epub-vocabs/commits/master/vocab/structure/index.html">Changes to this
+                        document</a>
                   </li>
                   <li>
                      <a href="https://github.com/IDPF/epub-vocabs/issues">Report an issue</a>
@@ -43,13 +40,14 @@
       </header>
       <section id="sotd">
          <h2 id="h_statusofthisdocument">Status of this Document</h2>
-         <p>This document contains draft terms from the <a href="http://www.idpf.org/epub/profiles/edu/spec/">EDUPUB profile</a>.</p>
-         <p>All terms in the <a href="#h_indexes">Indexes</a> section, with the exception of the <code>index</code> term, are 
-								new in the <a href="http://www.idpf.org/epub/idx">EPUB Indexes specification</a>, which is now a Proposed
-								Specification.</p>
+         <p>This document contains draft terms from the <a href="http://www.idpf.org/epub/profiles/edu/spec/">EDUPUB
+               profile</a>.</p>
+         <p>All terms in the <a href="#h_indexes">Indexes</a> section, with the exception of the <code>index</code> term, are
+            new in the <a href="http://www.idpf.org/epub/idx">EPUB Indexes specification</a>, which is now a Proposed
+            Specification.</p>
          <p>Any use of the terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
-         <p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms are no longer recommended
-						for use.</p>
+         <p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms are
+            no longer recommended for use.</p>
          <p>Terms without a label are considered stable.</p>
       </section>
       <nav id="sec-toc" class="toc">
@@ -136,52 +134,52 @@
       <section id="about">
          <h2 id="h_aboutthisvocabulary">About this vocabulary</h2>
          <div property="dcterms:description">
-            <p>This vocabulary, a part of EPUB® 3, defines a set of properties relating to the description of structural semantics of written works. While the vocabulary is generally host language agnostic, it has been constructed primarily to enable semantic inflection of elements in the HTML vocabulary.</p>
-            <p class="output-htu-expl" id="htu-expl">The <i>HTML usage 
-										context</i> fields indicate contexts in HTML5 documents 
-									where the given property is considered relevant. Authors may 
-									use the properties on HTML5 markup elements not specifically 
-									listed, but must ensure that the semantics they express represent 
-									a subset of the carrying element's semantics and do not attach 
-									an existing element's meaning to a semantically neutral element.</p>
-            <p class="output-htu-expl">When processing HTML5 documents, Reading 
-									Systems may ignore such non-compliant properties, unless their 
-									usage context is explicitly overridden or extended by the host 
-									specification.</p>
-            <p>The <i>Usage Details</i> sections identify IDPF specifications
-									that define or utilize the specified properties.</p>
+            <p>This vocabulary, a part of EPUB® 3, defines a set of properties relating to the description of structural
+               semantics of written works. While the vocabulary is generally host language agnostic, it has been constructed
+               primarily to enable semantic inflection of elements in the HTML vocabulary.</p>
+            <p class="output-htu-expl" id="htu-expl">The <i>HTML usage context</i> fields indicate contexts in HTML
+               documents where the given property is considered relevant. Authors may use the properties on HTML markup
+               elements not specifically listed, but must ensure that the semantics they express represent a subset of the
+               carrying element's semantics and do not attach an existing element's meaning to a semantically neutral
+               element.</p>
+            <p class="output-htu-expl">When processing HTML documents, Reading Systems may ignore such non-compliant
+               properties, unless their usage context is explicitly overridden or extended by the host specification.</p>
+            <p>The <i>Usage Details</i> sections identify IDPF specifications that define or utilize the specified
+               properties.</p>
          </div>
          <h2 id="h_revisionpolicy">Revision Policy</h2>
-         <p>This document is subject to change at any time. The terms defined in this vocabulary 
-						will never be removed, but may be deprecated.</p>
-         <p>Requests for additions, modifications and clarifications must be made through the 
-						<a href="https://code.google.com/p/epub-vocabs/issues/list">Issue Tracker</a>.</p>
+         <p>This document is subject to change at any time. The terms defined in this vocabulary will never be removed, but
+            may be deprecated.</p>
+         <p>Requests for additions, modifications and clarifications must be made through the <a
+               href="https://code.google.com/p/epub-vocabs/issues/list">Issue Tracker</a>.</p>
       </section>
       <section id="vocab" class="vocabulary">
-   
+
          <div id="partitions" about="#partitions" typeof="rdf:Bag">
             <h2 id="h_partitions" about="#partitions" rev="dcterms:title">Document partitions</h2>
             <dl about="#partitions" rev="rdfs:member">
                <dt id="cover" about="#cover" typeof="rdf:Property">cover</dt>
                <dd about="#cover" property="rdfs:comment" datatype="xsd:string">
-                  <p>A section that introduces the work, often consisting of a marketing image, the title, author and publisher, and select quotes and reviews.</p>
+                  <p>A section that introduces the work, often consisting of a marketing image, the title, author and
+                     publisher, and select quotes and reviews.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="frontmatter" about="#frontmatter" typeof="rdf:Property">frontmatter</dt>
                <dd about="#frontmatter" property="rdfs:comment" datatype="xsd:string">
-                  <p>Preliminary material to the main content of a publication, such as tables of contents, dedications, etc.</p>
+                  <p>Preliminary material to the main content of a publication, such as tables of contents, dedications,
+                     etc.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="bodymatter" about="#bodymatter" typeof="rdf:Property">bodymatter</dt>
@@ -191,19 +189,20 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="backmatter" about="#backmatter" typeof="rdf:Property">backmatter</dt>
                <dd about="#backmatter" property="rdfs:comment" datatype="xsd:string">
-                  <p>Ancillary material occurring after the main content of a publication, such as indices, appendices, etc.</p>
+                  <p>Ancillary material occurring after the main content of a publication, such as indices, appendices,
+                     etc.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
             </dl>
@@ -218,19 +217,20 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="part" about="#part" typeof="rdf:Property">part</dt>
                <dd about="#part" property="rdfs:comment" datatype="xsd:string">
-                  <p>A major structural division in a work that contains a set of related sections dealing with a particular subject, narrative arc or similar encapsulated theme.</p>
+                  <p>A major structural division in a work that contains a set of related sections dealing with a particular
+                     subject, narrative arc or similar encapsulated theme.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="chapter" about="#chapter" typeof="rdf:Property">chapter</dt>
@@ -240,11 +240,12 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
-               <dt id="subchapter" about="#subchapter" typeof="rdf:Property">subchapter<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="subchapter" about="#subchapter" typeof="rdf:Property">subchapter<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#subchapter" property="rdfs:comment" datatype="xsd:string">
                   <p>A major sub-division of a chapter.</p>
@@ -252,8 +253,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
                <dt id="division" about="#division" typeof="rdf:Property">division</dt>
@@ -263,26 +264,28 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                   </p>
                </dd>
             </dl>
          </div>
          <div id="sections" about="#sections" typeof="rdf:Bag">
             <h2 id="h_sections" about="#sections" rev="dcterms:title">Document sections and components</h2>
-            <p about="#sections" rev="dcterms:description">Sections and components that typically occur in the publication bodymatter.</p>
+            <p about="#sections" rev="dcterms:description">Sections and components that typically occur in the publication
+               bodymatter.</p>
             <dl about="#sections" rev="rdfs:member">
                <dt id="abstract" about="#abstract" typeof="rdf:Property">abstract<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#abstract" property="rdfs:comment" datatype="xsd:string">
-                  <p>A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt within it.</p>
+                  <p>A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt
+                     within it.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="foreword" about="#foreword" typeof="rdf:Property">foreword</dt>
@@ -292,8 +295,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="preface" about="#preface" typeof="rdf:Property">preface</dt>
@@ -303,8 +306,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="prologue" about="#prologue" typeof="rdf:Property">prologue</dt>
@@ -314,8 +317,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="introduction" about="#introduction" typeof="rdf:Property">introduction</dt>
@@ -325,19 +328,20 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="preamble" about="#preamble" typeof="rdf:Property">preamble</dt>
                <dd about="#preamble" property="rdfs:comment" datatype="xsd:string">
-                  <p>A section in the beginning of the work, typically containing introductory and/or explanatory prose regarding the scope or nature of the work's content</p>
+                  <p>A section in the beginning of the work, typically containing introductory and/or explanatory prose
+                     regarding the scope or nature of the work's content</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="conclusion" about="#conclusion" typeof="rdf:Property">conclusion</dt>
@@ -347,30 +351,33 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="epilogue" about="#epilogue" typeof="rdf:Property">epilogue</dt>
                <dd about="#epilogue" property="rdfs:comment" datatype="xsd:string">
-                  <p>A concluding section of narrative that wraps up or comments on the actions and events of the work, typically from a future perspective.</p>
+                  <p>A concluding section of narrative that wraps up or comments on the actions and events of the work,
+                     typically from a future perspective.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="afterword" about="#afterword" typeof="rdf:Property">afterword</dt>
                <dd about="#afterword" property="rdfs:comment" datatype="xsd:string">
-                  <p>A closing statement from the author or a person of importance, typically providing insight into how the content came to be written, its significance, or related events that have transpired since its timeline.</p>
+                  <p>A closing statement from the author or a person of importance, typically providing insight into how the
+                     content came to be written, its significance, or related events that have transpired since its
+                     timeline.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="epigraph" about="#epigraph" typeof="rdf:Property">epigraph</dt>
@@ -380,8 +387,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
             </dl>
@@ -391,15 +398,17 @@
             <dl about="#navigation" rev="rdfs:member">
                <dt id="toc" about="#toc" typeof="rdf:Property">toc</dt>
                <dd about="#toc" property="rdfs:comment" datatype="xsd:string">
-                  <p>A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it.</p>
+                  <p>A navigational aid that provides an ordered list of links to the major sectional headings in the
+                     content. A table of contents may cover an entire work, or only a smaller section of it.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
-               <dt id="toc-brief" about="#toc-brief" typeof="rdf:Property">toc-brief<span class="status draft"> [draft]</span>
+               <dt id="toc-brief" about="#toc-brief" typeof="rdf:Property">toc-brief<span class="status draft">
+                     [draft]</span>
                </dt>
                <dd about="#toc-brief" property="rdfs:comment" datatype="xsd:string">
                   <p>An abridged version of the table of contents.</p>
@@ -407,7 +416,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="landmarks" about="#landmarks" typeof="rdf:Property">landmarks</dt>
@@ -417,7 +426,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="loa" about="#loa" typeof="rdf:Property">loa</dt>
@@ -427,7 +436,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="loi" about="#loi" typeof="rdf:Property">loi</dt>
@@ -437,7 +446,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="lot" about="#lot" typeof="rdf:Property">lot</dt>
@@ -447,7 +456,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="lov" about="#lov" typeof="rdf:Property">lov</dt>
@@ -457,7 +466,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
             </dl>
@@ -467,49 +476,52 @@
             <dl about="#references" rev="rdfs:member">
                <dt id="appendix" about="#appendix" typeof="rdf:Property">appendix</dt>
                <dd about="#appendix" property="rdfs:comment" datatype="xsd:string">
-                  <p>A section of supplemental information located after the primary content that informs the content but is not central to it.</p>
+                  <p>A section of supplemental information located after the primary content that informs the content but is
+                     not central to it.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="colophon" about="#colophon" typeof="rdf:Property">colophon</dt>
                <dd about="#colophon" property="rdfs:comment" datatype="xsd:string">
-                  <p>A short section of production notes particular to the edition (e.g., describing the typeface used), often located at the end of a work.</p>
+                  <p>A short section of production notes particular to the edition (e.g., describing the typeface used),
+                     often located at the end of a work.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                     content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                        content</a>
                   </p>
                </dd>
                <dt id="credits" about="#credits" typeof="rdf:Property">credits<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#credits" property="rdfs:comment" datatype="xsd:string">
-                  <p>A collection of 
- <a href="#credit">credits</a>.</p>
+                  <p>A collection of <a href="#credit">credits</a>.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                     content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                        content</a>
                   </p>
                </dd>
                <dt id="keywords" about="#keywords" typeof="rdf:Property">keywords<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#keywords" property="rdfs:comment" datatype="xsd:string">
-                  <p>A collection of 
- <a href="#keyword">keywords</a>.</p>
+                  <p>A collection of <a href="#keyword">keywords</a>.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                     content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                        content</a>
                   </p>
                </dd>
             </dl>
@@ -518,13 +530,14 @@
                <dl about="#indexes" rev="rdfs:member">
                   <dt id="index" about="#index" typeof="rdf:Property">index</dt>
                   <dd about="#index" property="rdfs:comment" datatype="xsd:string">
-                     <p>A navigational aid that provides a detailed list of links to key subjects, names and other important topics covered in the work.</p>
+                     <p>A navigational aid that provides a detailed list of links to key subjects, names and other important
+                        topics covered in the work.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-body-element-0">body</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/sections.html#the-body-element">body</a>
                      </p>
                   </dd>
                   <dd>
@@ -548,14 +561,15 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-header-element">header</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/sections.html#the-header-element">header</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-headnotes">EPUB Indexes – index-headnotes property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-headnotes">EPUB Indexes – index-headnotes
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-legend" about="#index-legend" typeof="rdf:Property">index-legend</dt>
@@ -565,8 +579,7 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-legend" rel="role:scope"
-                              resource="#index-headnotes">
+                        <span class="subpropref" about="#index-legend" rel="role:scope" resource="#index-headnotes">
                            <a href="#index-headnotes">index-headnotes</a>
                         </span>
                      </p>
@@ -574,19 +587,21 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">dl</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#the-dl-element">dl</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-legend">EPUB Indexes – index-legend property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-legend">EPUB Indexes – index-legend
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-group" about="#index-group" typeof="rdf:Property">index-group</dt>
                   <dd about="#index-group" property="rdfs:comment" datatype="xsd:string">
-                     <p>Collection of consecutive main entries that share a common characteristic, for example the starting letter of the main entries.</p>
+                     <p>Collection of consecutive main entries that share a common characteristic, for example the starting
+                        letter of the main entries.</p>
                   </dd>
                   <dd>
                      <p>
@@ -599,13 +614,15 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-group">EPUB Indexes – index-group property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-group">EPUB Indexes – index-group
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-entry-list" about="#index-entry-list" typeof="rdf:Property">index-entry-list</dt>
@@ -615,11 +632,9 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-entry-list" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-entry-list" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
-                        </span>, <span class="subpropref" about="#index-entry-list" rel="role:scope"
-                              resource="#index-group">
+                        </span>, <span class="subpropref" about="#index-entry-list" rel="role:scope" resource="#index-group">
                            <a href="#index-group">index-group</a>
                         </span> and <span class="subpropref" about="#index-entry-list" rel="role:scope" resource="#index">
                            <a href="#index">index</a>
@@ -629,12 +644,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element">ul</a>; this property is implied when the ul has an ancestor of index except within index-headnotes</p>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-ul-element">ul</a>; this property is
+                        implied when the ul has an ancestor of index except within index-headnotes</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-entry-list">EPUB Indexes – index-entry-list property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-entry-list">EPUB Indexes –
+                           index-entry-list property</a>
                      </p>
                   </dd>
                   <dt id="index-entry" about="#index-entry" typeof="rdf:Property">index-entry</dt>
@@ -644,8 +661,7 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-entry" rel="role:scope"
-                              resource="#index-entry-list">
+                        <span class="subpropref" about="#index-entry" rel="role:scope" resource="#index-entry-list">
                            <a href="#index-entry-list">index-entry-list</a>
                         </span>
                      </p>
@@ -653,12 +669,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>; this property is implied when parent ul is of type index-entry-list (implicit or explicit)</p>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>; this property is
+                        implied when parent ul is of type index-entry-list (implicit or explicit)</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-entry">EPUB Indexes – index-entry property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-entry">EPUB Indexes – index-entry
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-term" about="#index-term" typeof="rdf:Property">index-term</dt>
@@ -668,13 +686,12 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-term" rel="role:scope"
-                              resource="#index-xref-related">
+                        <span class="subpropref" about="#index-term" rel="role:scope" resource="#index-xref-related">
                            <a href="#index-xref-related">index-xref-related</a>
                         </span>, <span class="subpropref" about="#index-term" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span> and <span class="subpropref" about="#index-term" rel="role:scope"
-                              resource="#index-xref-preferred">
+                           resource="#index-xref-preferred">
                            <a href="#index-xref-preferred">index-xref-preferred</a>
                         </span>
                      </p>
@@ -682,14 +699,15 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>; typically 
- <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element">span</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>;
+                        typically <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-span-element">span</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term">EPUB Indexes – index-term property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term">EPUB Indexes – index-term
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-editor-note" about="#index-editor-note" typeof="rdf:Property">index-editor-note</dt>
@@ -699,8 +717,7 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-editor-note" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-editor-note" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>
                      </p>
@@ -708,13 +725,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-editor-note">EPUB Indexes – index-editor-note property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-editor-note">EPUB Indexes –
+                           index-editor-note property</a>
                      </p>
                   </dd>
                   <dt id="index-locator" about="#index-locator" typeof="rdf:Property">index-locator</dt>
@@ -724,14 +742,13 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-locator" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-locator" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>, <span class="subpropref" about="#index-locator" rel="role:scope"
-                              resource="#index-locator-list">
+                           resource="#index-locator-list">
                            <a href="#index-locator-list">index-locator-list</a>
                         </span> and <span class="subpropref" about="#index-locator" rel="role:scope"
-                              resource="#index-locator-range">
+                           resource="#index-locator-range">
                            <a href="#index-locator-range">index-locator-range</a>
                         </span>
                      </p>
@@ -739,12 +756,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>; this property is implied when parent context is index-locator-list or index-locator-range</p>
+                        <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>; this property is
+                        implied when parent context is index-locator-list or index-locator-range</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator">EPUB Indexes – index-locator property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator">EPUB Indexes – index-locator
+                           property</a>
                      </p>
                   </dd>
                   <dt id="index-locator-list" about="#index-locator-list" typeof="rdf:Property">index-locator-list</dt>
@@ -754,8 +773,7 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-locator-list" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-locator-list" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>
                      </p>
@@ -763,13 +781,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element">ul</a>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-ul-element">ul</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator-list">EPUB Indexes – index-locator-list property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator-list">EPUB Indexes –
+                           index-locator-list property</a>
                      </p>
                   </dd>
                   <dt id="index-locator-range" about="#index-locator-range" typeof="rdf:Property">index-locator-range</dt>
@@ -779,11 +798,10 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-locator-range" rel="role:scope"
-                              resource="#index-locator-list">
+                        <span class="subpropref" about="#index-locator-range" rel="role:scope" resource="#index-locator-list">
                            <a href="#index-locator-list">index-locator-list</a>
                         </span> and <span class="subpropref" about="#index-locator-range" rel="role:scope"
-                              resource="#index-entry">
+                           resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>
                      </p>
@@ -791,24 +809,25 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator-range">EPUB Indexes – index-locator-range property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-locator-range">EPUB Indexes –
+                           index-locator-range property</a>
                      </p>
                   </dd>
                   <dt id="index-xref-preferred" about="#index-xref-preferred" typeof="rdf:Property">index-xref-preferred</dt>
                   <dd about="#index-xref-preferred" property="rdfs:comment" datatype="xsd:string">
-                     <p>Reference from one term to one or more preferred terms or term categories in an index (analogous to "See xxx").</p>
+                     <p>Reference from one term to one or more preferred terms or term categories in an index (analogous to
+                        "See xxx").</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-xref-preferred" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-xref-preferred" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>
                      </p>
@@ -816,24 +835,25 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-xref-preferred">EPUB Indexes – index-xref-preferred property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-xref-preferred">EPUB Indexes –
+                           index-xref-preferred property</a>
                      </p>
                   </dd>
                   <dt id="index-xref-related" about="#index-xref-related" typeof="rdf:Property">index-xref-related</dt>
                   <dd about="#index-xref-related" property="rdfs:comment" datatype="xsd:string">
-                     <p>Reference from one term to one or more related terms or term categories in an index (analogous to "See also xxx").</p>
+                     <p>Reference from one term to one or more related terms or term categories in an index (analogous to
+                        "See also xxx").</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-xref-related" rel="role:scope"
-                              resource="#index-entry">
+                        <span class="subpropref" about="#index-xref-related" rel="role:scope" resource="#index-entry">
                            <a href="#index-entry">index-entry</a>
                         </span>
                      </p>
@@ -841,13 +861,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-xref-related">EPUB Indexes – index-xref-related property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-xref-related">EPUB Indexes –
+                           index-xref-related property</a>
                      </p>
                   </dd>
                   <dt id="index-term-category" about="#index-term-category" typeof="rdf:Property">index-term-category</dt>
@@ -857,11 +878,10 @@
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#index-term-category" rel="role:scope"
-                              resource="#index-xref-related">
+                        <span class="subpropref" about="#index-term-category" rel="role:scope" resource="#index-xref-related">
                            <a href="#index-xref-related">index-xref-related</a>
                         </span> and <span class="subpropref" about="#index-term-category" rel="role:scope"
-                              resource="#index-xref-preferred">
+                           resource="#index-xref-preferred">
                            <a href="#index-xref-preferred">index-xref-preferred</a>
                         </span>
                      </p>
@@ -869,16 +889,18 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                        <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term-category">EPUB Indexes – index-term-category property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term-category">EPUB Indexes –
+                           index-term-category property</a>
                      </p>
                   </dd>
-                  <dt id="index-term-categories" about="#index-term-categories" typeof="rdf:Property">index-term-categories</dt>
+                  <dt id="index-term-categories" about="#index-term-categories" typeof="rdf:Property"
+                     >index-term-categories</dt>
                   <dd about="#index-term-categories" property="rdfs:comment" datatype="xsd:string">
                      <p>Wrapper for a list of the term categories belonging to an index.</p>
                   </dd>
@@ -886,10 +908,10 @@
                      <p>
                         <span class="subproplabel">Required parent context:</span>
                         <span class="subpropref" about="#index-term-categories" rel="role:scope"
-                              resource="#index-xref-related">
+                           resource="#index-xref-related">
                            <a href="#index-xref-related">index-xref-related</a>
                         </span> and <span class="subpropref" about="#index-term-categories" rel="role:scope"
-                              resource="#index-xref-preferred">
+                           resource="#index-xref-preferred">
                            <a href="#index-xref-preferred">index-xref-preferred</a>
                         </span>
                      </p>
@@ -897,13 +919,14 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                        <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                      </p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Usage details: </span>
-                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term-categories">EPUB Indexes – index-term-categories property</a>
+                        <a href="http://www.idpf.org/epub/idx/epub-indexes.html#bb-term-categories">EPUB Indexes –
+                           index-term-categories property</a>
                      </p>
                   </dd>
                </dl>
@@ -918,8 +941,9 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">dl</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-dl-element">dl</a>, <a
+                           href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
                   <dt id="glossterm" about="#glossterm" typeof="rdf:Property">glossterm</dt>
@@ -936,15 +960,14 @@
                   </dd>
                   <dd>
                      <p>
-                        <span class="subproplabel">HTML usage context: </span>The glossterm property is implied on 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dt-element">dt</a> elements within a 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">dl</a> element marked with the 
- <a href="#glossary">glossary</a> property.</p>
+                        <span class="subproplabel">HTML usage context: </span>The glossterm property is implied on <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#the-dt-element">dt</a> elements within a <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#the-dl-element">dl</a> element marked with
+                        the <a href="#glossary">glossary</a> property.</p>
                   </dd>
                   <dt id="glossdef" about="#glossdef" typeof="rdf:Property">glossdef</dt>
                   <dd about="#glossdef" property="rdfs:comment" datatype="xsd:string">
-                     <p>The definition of a 
- <a href="#glossterm">term in a glossary</a>.</p>
+                     <p>The definition of a <a href="#glossterm">term in a glossary</a>.</p>
                   </dd>
                   <dd>
                      <p>
@@ -956,10 +979,10 @@
                   </dd>
                   <dd>
                      <p>
-                        <span class="subproplabel">HTML usage context: </span>The glossdef property is implied on 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">dd</a> elements within a 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">dl</a> element marked with the 
- <a href="#glossary">glossary</a> property.</p>
+                        <span class="subproplabel">HTML usage context: </span>The glossdef property is implied on <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#the-dd-element">dd</a> elements within a <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#the-dl-element">dl</a> element marked with
+                        the <a href="#glossary">glossary</a> property.</p>
                   </dd>
                </dl>
             </div>
@@ -973,19 +996,20 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
                   <dt id="biblioentry" about="#biblioentry" typeof="rdf:Property">biblioentry</dt>
                   <dd about="#biblioentry" property="rdfs:comment" datatype="xsd:string">
-                     <p>A single reference to an external source in a 
- <a href="#bibliography">bibliography</a>. A biblioentry typically provides more detailed information than its reference(s) in the content (e.g., full title, author(s), publisher, publication date, etc.).</p>
+                     <p>A single reference to an external source in a <a href="#bibliography">bibliography</a>. A biblioentry
+                        typically provides more detailed information than its reference(s) in the content (e.g., full title,
+                        author(s), publisher, publication date, etc.).</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">Required parent context:</span>
-                        <span class="subpropref" about="#biblioentry" rel="role:scope"
-                              resource="#bibliography">
+                        <span class="subpropref" about="#biblioentry" rel="role:scope" resource="#bibliography">
                            <a href="#bibliography">bibliography</a>
                         </span>
                      </p>
@@ -993,7 +1017,7 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
                </dl>
@@ -1001,7 +1025,8 @@
          </div>
          <div id="preliminary" about="#preliminary" typeof="rdf:Bag">
             <h2 id="h_preliminary" about="#preliminary" rev="dcterms:title">Preliminary sections and components</h2>
-            <p about="#preliminary" rev="dcterms:description">Preliminary sections and components, typically occuring in the publication frontmatter.</p>
+            <p about="#preliminary" rev="dcterms:description">Preliminary sections and components, typically occuring in the
+               publication frontmatter.</p>
             <dl about="#preliminary" rev="rdfs:member">
                <dt id="titlepage" about="#titlepage" typeof="rdf:Property">titlepage</dt>
                <dd about="#titlepage" property="rdfs:comment" datatype="xsd:string">
@@ -1010,8 +1035,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="halftitlepage" about="#halftitlepage" typeof="rdf:Property">halftitlepage</dt>
@@ -1021,8 +1046,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="copyright-page" about="#copyright-page" typeof="rdf:Property">copyright-page</dt>
@@ -1032,11 +1057,12 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
-               <dt id="seriespage" about="#seriespage" typeof="rdf:Property">seriespage <span class="status draft"> [draft]</span>
+               <dt id="seriespage" about="#seriespage" typeof="rdf:Property">seriespage <span class="status draft">
+                     [draft]</span>
                </dt>
                <dd about="#seriespage" property="rdfs:comment" datatype="xsd:string">
                   <p>Marketing section used to list related publications.</p>
@@ -1044,19 +1070,20 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="acknowledgments" about="#acknowledgments" typeof="rdf:Property">acknowledgments</dt>
                <dd about="#acknowledgments" property="rdfs:comment" datatype="xsd:string">
-                  <p>A section or statement that acknowledges significant contributions by persons, organizations, governments and other entities to the realization of the work.</p>
+                  <p>A section or statement that acknowledges significant contributions by persons, organizations,
+                     governments and other entities to the realization of the work.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="imprint" about="#imprint" typeof="rdf:Property">imprint</dt>
@@ -1066,8 +1093,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="imprimatur" about="#imprimatur" typeof="rdf:Property">imprimatur</dt>
@@ -1077,8 +1104,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="contributors" about="#contributors" typeof="rdf:Property">contributors</dt>
@@ -1088,42 +1115,45 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="other-credits" about="#other-credits" typeof="rdf:Property">other-credits</dt>
                <dd about="#other-credits" property="rdfs:comment" datatype="xsd:string">
-                  <p>Acknowledgments of previously published parts of the work, illustration credits, and permission to quote from copyrighted material.</p>
+                  <p>Acknowledgments of previously published parts of the work, illustration credits, and permission to quote
+                     from copyrighted material.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="errata" about="#errata" typeof="rdf:Property">errata</dt>
                <dd about="#errata" property="rdfs:comment" datatype="xsd:string">
-                  <p>A set of corrections discovered after initial publication of the work, sometimes referred to as corrigenda.</p>
+                  <p>A set of corrections discovered after initial publication of the work, sometimes referred to as
+                     corrigenda.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="dedication" about="#dedication" typeof="rdf:Property">dedication</dt>
                <dd about="#dedication" property="rdfs:comment" datatype="xsd:string">
-                  <p>An inscription at the front of the work, typically addressed in tribute to one or more persons close to the author.</p>
+                  <p>An inscription at the front of the work, typically addressed in tribute to one or more persons close to
+                     the author.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dt id="revision-history" about="#revision-history" typeof="rdf:Property">revision-history</dt>
@@ -1133,8 +1163,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
             </dl>
@@ -1142,7 +1172,8 @@
          <div id="asides" about="#asides" typeof="rdf:Bag">
             <h2 id="h_asides" about="#asides" rev="dcterms:title">Complementary content</h2>
             <dl about="#asides" rev="rdfs:member">
-               <dt id="case-study" about="#case-study" typeof="rdf:Property">case-study<span class="status draft"> [draft]</span>
+               <dt id="case-study" about="#case-study" typeof="rdf:Property">case-study<span class="status draft">
+                     [draft]</span>
                </dt>
                <dd about="#case-study" property="rdfs:comment" datatype="xsd:string">
                   <p>A detailed analysis of a specific topic.</p>
@@ -1151,7 +1182,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#case-study" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1159,10 +1190,11 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
-               <dt id="help" about="#help" typeof="rdf:Property">help<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="help" about="#help" typeof="rdf:Property">help<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#help" property="rdfs:comment" datatype="xsd:string">
                   <p>Helpful information that clarifies some aspect of the content or assists in its comprehension.</p>
@@ -1171,7 +1203,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#help" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1179,8 +1211,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dd>
@@ -1191,7 +1223,8 @@
                      </span>
                   </p>
                </dd>
-               <dt id="marginalia" about="#marginalia" typeof="rdf:Property">marginalia<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="marginalia" about="#marginalia" typeof="rdf:Property">marginalia<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#marginalia" property="rdfs:comment" datatype="xsd:string">
                   <p>Content, both textual and graphical, that is offset in the margin.</p>
@@ -1200,7 +1233,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#marginalia" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1208,39 +1241,42 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Replaced by:</span>
                      <span class="subpropref" about="#marginalia" rel="dcterms:isReplacedBy">
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>
                      </span>
                   </p>
                </dd>
                <dt id="notice" about="#notice" typeof="rdf:Property">notice</dt>
                <dd about="#notice" property="rdfs:comment" datatype="xsd:string">
-                  <p>Notifies the user of consequences that might arise from an action or event. Examples include warnings, cautions and dangers.</p>
+                  <p>Notifies the user of consequences that might arise from an action or event. Examples include warnings,
+                     cautions and dangers.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
-               <dt id="pullquote" about="#pullquote" typeof="rdf:Property">pullquote<span class="status draft"> [draft]</span>
+               <dt id="pullquote" about="#pullquote" typeof="rdf:Property">pullquote<span class="status draft">
+                     [draft]</span>
                </dt>
                <dd about="#pullquote" property="rdfs:comment" datatype="xsd:string">
-                  <p>A distinctively placed or highlighted quotation from the current content designed to draw attention to a topic or highlight a key point.</p>
+                  <p>A distinctively placed or highlighted quotation from the current content designed to draw attention to a
+                     topic or highlight a key point.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#pullquote" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1248,10 +1284,11 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>
                   </p>
                </dd>
-               <dt id="sidebar" about="#sidebar" typeof="rdf:Property">sidebar<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="sidebar" about="#sidebar" typeof="rdf:Property">sidebar<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#sidebar" property="rdfs:comment" datatype="xsd:string">
                   <p>Secondary or supplementary content, typically formatted as an inset or box.</p>
@@ -1260,7 +1297,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#sidebar" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1268,14 +1305,14 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>
                   </p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Replaced by:</span>
                      <span class="subpropref" about="#sidebar" rel="dcterms:isReplacedBy">
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>
                      </span>
                   </p>
                </dd>
@@ -1287,7 +1324,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#tip" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1295,11 +1332,12 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
-               <dt id="warning" about="#warning" typeof="rdf:Property">warning<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="warning" about="#warning" typeof="rdf:Property">warning<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#warning" property="rdfs:comment" datatype="xsd:string">
                   <p>A warning.</p>
@@ -1307,8 +1345,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-section-element">section</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-section-element">section</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                   </p>
                </dd>
                <dd>
@@ -1331,8 +1369,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
-                     <span class="subpropref" about="#halftitle" rel="rdfs:subPropertyOf"
-                           resource="#title">
+                     <span class="subpropref" about="#halftitle" rel="rdfs:subPropertyOf" resource="#title">
                         <a href="#title">title</a>
                      </span>
                   </p>
@@ -1340,20 +1377,19 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>. This property should only appear once within the document scope.</p>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>. This
+                     property should only appear once within the document scope.</p>
                </dd>
                <dt id="fulltitle" about="#fulltitle" typeof="rdf:Property">fulltitle</dt>
                <dd about="#fulltitle" property="rdfs:comment" datatype="xsd:string">
-                  <p>The full title of the work, either simple, in which case it is identical to 
- <a href="#title">title</a>, or compound, in which case it consists of a 
- <a href="#title">title</a> and a 
- <a href="#subtitle">subtitle</a>.</p>
+                  <p>The full title of the work, either simple, in which case it is identical to <a href="#title">title</a>,
+                     or compound, in which case it consists of a <a href="#title">title</a> and a <a href="#subtitle"
+                        >subtitle</a>.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
-                     <span class="subpropref" about="#fulltitle" rel="rdfs:subPropertyOf"
-                           resource="#title">
+                     <span class="subpropref" about="#fulltitle" rel="rdfs:subPropertyOf" resource="#title">
                         <a href="#title">title</a>
                      </span>
                   </p>
@@ -1361,8 +1397,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">Same as:</span>
-                     <span class="subpropref" about="#fulltitle" rel="owl:sameAs"
-                           resource="http://purl.org/dc/terms/title">
+                     <span class="subpropref" about="#fulltitle" rel="owl:sameAs" resource="http://purl.org/dc/terms/title">
                         <a href="http://purl.org/dc/terms/title">http://purl.org/dc/terms/title</a>
                      </span>
                   </p>
@@ -1370,7 +1405,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>. This property should only appear once within the document scope.</p>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>. This
+                     property should only appear once within the document scope.</p>
                </dd>
                <dt id="covertitle" about="#covertitle" typeof="rdf:Property">covertitle</dt>
                <dd about="#covertitle" property="rdfs:comment" datatype="xsd:string">
@@ -1379,8 +1415,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
-                     <span class="subpropref" about="#covertitle" rel="rdfs:subPropertyOf"
-                           resource="#title">
+                     <span class="subpropref" about="#covertitle" rel="rdfs:subPropertyOf" resource="#title">
                         <a href="#title">title</a>
                      </span>
                   </p>
@@ -1388,7 +1423,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>. This property should only appear once within the document scope.</p>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>. This
+                     property should only appear once within the document scope.</p>
                </dd>
                <dt id="title" about="#title" typeof="rdf:Property">title</dt>
                <dd about="#title" property="rdfs:comment" datatype="xsd:string">
@@ -1397,9 +1433,10 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a> descendants of 
- <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>.</p>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
+                     descendants of <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading
+                        content</a>.</p>
                </dd>
                <dt id="subtitle" about="#subtitle" typeof="rdf:Property">subtitle</dt>
                <dd about="#subtitle" property="rdfs:comment" datatype="xsd:string">
@@ -1416,18 +1453,18 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a> descendants of 
- <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-p-element">paragraphs</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-div-element">divs</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
+                     descendants of <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading
+                        content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#the-p-element">paragraphs</a>,
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-div-element">divs</a>
                   </p>
                </dd>
                <dt id="label" about="#label" typeof="rdf:Property">label<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#label" property="rdfs:comment" datatype="xsd:string">
-                  <p>The text label that precedes an 
- <a href="#ordinal">ordinal</a> in a component title (e.g., 'Chapter', 'Part', 'Figure', 'Table').</p>
+                  <p>The text label that precedes an <a href="#ordinal">ordinal</a> in a component title (e.g., 'Chapter',
+                     'Part', 'Figure', 'Table').</p>
                </dd>
                <dd>
                   <p>
@@ -1440,9 +1477,9 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-figcaption-element">figcaption</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#the-figcaption-element">figcaption</a>
                   </p>
                </dd>
                <dt id="ordinal" about="#ordinal" typeof="rdf:Property">ordinal<span class="status draft"> [draft]</span>
@@ -1461,22 +1498,23 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#heading-content">heading content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-figcaption-element">figcaption</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content">heading content</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#the-figcaption-element">figcaption</a>
                   </p>
                </dd>
                <dt id="bridgehead" about="#bridgehead" typeof="rdf:Property">bridgehead</dt>
                <dd about="#bridgehead" property="rdfs:comment" datatype="xsd:string">
-                  <p>A structurally insignificant heading that does not contribute to the hierarchical structure of the work.</p>
+                  <p>A structurally insignificant heading that does not contribute to the hierarchical structure of the
+                     work.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>, typically 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-p-element">p</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#the-div-element">div</a> or 
- <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element">span</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>, typically
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#the-p-element">p</a>, <a
+                        href="https://www.w3.org/TR/html/grouping-content.html#the-div-element">div</a> or <a
+                        href="https://www.w3.org/TR/html/textlevel-semantics.html#the-span-element">span</a>
                   </p>
                </dd>
             </dl>
@@ -1488,50 +1526,55 @@
                <dl about="#learning-obj" rev="rdfs:member">
                   <dt id="learning-objective" about="#learning-objective" typeof="rdf:Property">learning-objective</dt>
                   <dd about="#learning-objective" property="rdfs:comment" datatype="xsd:string">
-                     <p>An explicit designation or description of a learning objective or a reference to an explicit learning objective.</p>
+                     <p>An explicit designation or description of a learning objective or a reference to an explicit learning
+                        objective.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>, <a
+                           href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                      </p>
                   </dd>
-                  <dt id="learning-objectives" about="#learning-objectives" typeof="rdf:Property">learning-objectives<span class="status draft"> [draft]</span>
+                  <dt id="learning-objectives" about="#learning-objectives" typeof="rdf:Property">learning-objectives<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-objectives" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#learning-objective">learning-objectives</a>.</p>
+                     <p>A collection of <a href="#learning-objective">learning-objectives</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="learning-outcome" about="#learning-outcome" typeof="rdf:Property">learning-outcome<span class="status draft"> [draft]</span>
+                  <dt id="learning-outcome" about="#learning-outcome" typeof="rdf:Property">learning-outcome<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-outcome" property="rdfs:comment" datatype="xsd:string">
-                     <p>The understanding or ability a student is expected to achieve as a result of a lesson or activity.</p>
+                     <p>The understanding or ability a student is expected to achieve as a result of a lesson or
+                        activity.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
-                  <dt id="learning-outcomes" about="#learning-outcomes" typeof="rdf:Property">learning-outcomes<span class="status draft"> [draft]</span>
+                  <dt id="learning-outcomes" about="#learning-outcomes" typeof="rdf:Property">learning-outcomes<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-outcomes" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#learning-outcome">learing-outcomes</a>.</p>
+                     <p>A collection of <a href="#learning-outcome">learing-outcomes</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                           content</a>
                      </p>
                   </dd>
                   <dt id="learning-resource" about="#learning-resource" typeof="rdf:Property">learning-resource</dt>
@@ -1541,45 +1584,50 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="https://www.w3.org/TR/html5/dom.html#flow-content">flow content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow content</a>
                      </p>
                   </dd>
-                  <dt id="learning-resources" about="#learning-resources" typeof="rdf:Property">learning-resources<span class="status draft"> [draft]</span>
+                  <dt id="learning-resources" about="#learning-resources" typeof="rdf:Property">learning-resources<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-resources" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#learning-resource">learning-resources</a>.</p>
+                     <p>A collection of <a href="#learning-resource">learning-resources</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="learning-standard" about="#learning-standard" typeof="rdf:Property">learning-standard<span class="status draft"> [draft]</span>
+                  <dt id="learning-standard" about="#learning-standard" typeof="rdf:Property">learning-standard<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-standard" property="rdfs:comment" datatype="xsd:string">
-                     <p>A formal set of expectations or requirements typically issued by a government or a standards body.</p>
+                     <p>A formal set of expectations or requirements typically issued by a government or a standards
+                        body.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content"
+                           >phrasing content</a>
                      </p>
                   </dd>
-                  <dt id="learning-standards" about="#learning-standards" typeof="rdf:Property">learning-standards<span class="status draft"> [draft]</span>
+                  <dt id="learning-standards" about="#learning-standards" typeof="rdf:Property">learning-standards<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#learning-standards" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#learning-standard">learning-standards</a>.</p>
+                     <p>A collection of <a href="#learning-standard">learning-standards</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                           content</a>
                      </p>
                   </dd>
                </dl>
@@ -1595,46 +1643,50 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
                   <dt id="answers" about="#answers" typeof="rdf:Property">answers<span class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#answers" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#answer">answers</a>.</p>
+                     <p>A collection of <a href="#answer">answers</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>, <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping
+                           content</a>
                      </p>
                   </dd>
                   <dt id="assessment" about="#assessment" typeof="rdf:Property">assessment</dt>
                   <dd about="#assessment" property="rdfs:comment" datatype="xsd:string">
-                     <p>A test, quiz, or other activity that helps measure a student's understanding of what is being taught.</p>
+                     <p>A test, quiz, or other activity that helps measure a student's understanding of what is being
+                        taught.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="assessments" about="#assessments" typeof="rdf:Property">assessments<span class="status draft"> [draft]</span>
+                  <dt id="assessments" about="#assessments" typeof="rdf:Property">assessments<span class="status draft">
+                        [draft]</span>
                   </dt>
                   <dd about="#assessments" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#assessment">assessments</a>.</p>
+                     <p>A collection of <a href="#assessment">assessments</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="feedback" about="#feedback" typeof="rdf:Property">feedback<span class="status draft"> [draft]</span>
+                  <dt id="feedback" about="#feedback" typeof="rdf:Property">feedback<span class="status draft">
+                        [draft]</span>
                   </dt>
                   <dd about="#feedback" property="rdfs:comment" datatype="xsd:string">
                      <p>Instruction to the reader based on the result of an assessment.</p>
@@ -1642,25 +1694,26 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>, <a
+                           href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                      </p>
                   </dd>
-                  <dt id="fill-in-the-blank-problem" about="#fill-in-the-blank-problem"
-                      typeof="rdf:Property">fill-in-the-blank-problem<span class="status draft"> [draft]</span>
+                  <dt id="fill-in-the-blank-problem" about="#fill-in-the-blank-problem" typeof="rdf:Property"
+                        >fill-in-the-blank-problem<span class="status draft"> [draft]</span>
                   </dt>
-                  <dd about="#fill-in-the-blank-problem" property="rdfs:comment"
-                      datatype="xsd:string">
-                     <p>A problem that requires the reader to input a text answer to complete a sentence, statement or similar.</p>
+                  <dd about="#fill-in-the-blank-problem" property="rdfs:comment" datatype="xsd:string">
+                     <p>A problem that requires the reader to input a text answer to complete a sentence, statement or
+                        similar.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
-                  <dt id="general-problem" about="#general-problem" typeof="rdf:Property">general-problem<span class="status draft"> [draft]</span>
+                  <dt id="general-problem" about="#general-problem" typeof="rdf:Property">general-problem<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#general-problem" property="rdfs:comment" datatype="xsd:string">
                      <p>A problem with a free-form solution.</p>
@@ -1668,46 +1721,52 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
                   <dt id="qna" about="#qna" typeof="rdf:Property">qna</dt>
                   <dd about="#qna" property="rdfs:comment" datatype="xsd:string">
-                     <p>A section of content structured as a series of questions and answers, such as an interview or list of frequently asked questions.</p>
+                     <p>A section of content structured as a series of questions and answers, such as an interview or list of
+                        frequently asked questions.</p>
                   </dd>
                   <dd>
                      <p>
-                        <span class="subproplabel">HTML usage context: </span>lists or 
- <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <span class="subproplabel">HTML usage context: </span>lists or <a
+                           href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="match-problem" about="#match-problem" typeof="rdf:Property">match-problem<span class="status draft"> [draft]</span>
+                  <dt id="match-problem" about="#match-problem" typeof="rdf:Property">match-problem<span class="status draft"
+                        > [draft]</span>
                   </dt>
                   <dd about="#match-problem" property="rdfs:comment" datatype="xsd:string">
-                     <p>A problem that requires the reader to match the contents of one list with the corresponding items in another list.</p>
+                     <p>A problem that requires the reader to match the contents of one list with the corresponding items in
+                        another list.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
-                  <dt id="multiple-choice-problem" about="#multiple-choice-problem"
-                      typeof="rdf:Property">multiple-choice-problem<span class="status draft"> [draft]</span>
+                  <dt id="multiple-choice-problem" about="#multiple-choice-problem" typeof="rdf:Property"
+                        >multiple-choice-problem<span class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#multiple-choice-problem" property="rdfs:comment" datatype="xsd:string">
-                     <p>A problem with a set of potential answers to choose from ‒ some, all or none of which may be correct.</p>
+                     <p>A problem with a set of potential answers to choose from ‒ some, all or none of which may be
+                        correct.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
-                  <dt id="practice" about="#practice" typeof="rdf:Property">practice<span class="status draft"> [draft]</span>
+                  <dt id="practice" about="#practice" typeof="rdf:Property">practice<span class="status draft">
+                        [draft]</span>
                   </dt>
                   <dd about="#practice" property="rdfs:comment" datatype="xsd:string">
                      <p>A review exercise or sample.</p>
@@ -1723,11 +1782,12 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
-                  <dt id="question" about="#question" typeof="rdf:Property">question<span class="status draft"> [draft]</span>
+                  <dt id="question" about="#question" typeof="rdf:Property">question<span class="status draft">
+                        [draft]</span>
                   </dt>
                   <dd about="#question" property="rdfs:comment" datatype="xsd:string">
                      <p>The component of a self-assessment problem that identifies the question to be solved.</p>
@@ -1735,22 +1795,24 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
-                  <dt id="practices" about="#practices" typeof="rdf:Property">practices<span class="status draft"> [draft]</span>
+                  <dt id="practices" about="#practices" typeof="rdf:Property">practices<span class="status draft">
+                        [draft]</span>
                   </dt>
                   <dd about="#practices" property="rdfs:comment" datatype="xsd:string">
-                     <p>A collection of 
- <a href="#practice">practices</a>.</p>
+                     <p>A collection of <a href="#practice">practices</a>.</p>
                   </dd>
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                        <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning
+                           content</a>
                      </p>
                   </dd>
-                  <dt id="true-false-problem" about="#true-false-problem" typeof="rdf:Property">true-false-problem<span class="status draft"> [draft]</span>
+                  <dt id="true-false-problem" about="#true-false-problem" typeof="rdf:Property">true-false-problem<span
+                        class="status draft"> [draft]</span>
                   </dt>
                   <dd about="#true-false-problem" property="rdfs:comment" datatype="xsd:string">
                      <p>A problem with either a true or false answer.</p>
@@ -1758,8 +1820,8 @@
                   <dd>
                      <p>
                         <span class="subproplabel">HTML usage context: </span>
-                        <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/grouping-content.html#grouping-content">grouping content</a>
+                        <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                           href="https://www.w3.org/TR/html/grouping-content.html#grouping-content">grouping content</a>
                      </p>
                   </dd>
                </dl>
@@ -1775,7 +1837,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>
+                     <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>
                   </p>
                </dd>
                <dd>
@@ -1786,13 +1848,12 @@
                </dd>
                <dt id="panel-group" about="#panel-group" typeof="rdf:Property">panel-group</dt>
                <dd about="#panel-group" property="rdfs:comment" datatype="xsd:string">
-                  <p>A group of 
- <a href="#panel">panels</a> (e.g., a strip).</p>
+                  <p>A group of <a href="#panel">panels</a> (e.g., a strip).</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>
+                     <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>
                   </p>
                </dd>
                <dd>
@@ -1803,13 +1864,13 @@
                </dd>
                <dt id="balloon" about="#balloon" typeof="rdf:Property">balloon</dt>
                <dd about="#balloon" property="rdfs:comment" datatype="xsd:string">
-                  <p>An area in a comic 
- <a href="#panel">panel</a> that contains the words, spoken or thought, of a character.</p>
+                  <p>An area in a comic <a href="#panel">panel</a> that contains the words, spoken or thought, of a
+                     character.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>
+                     <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>
                   </p>
                </dd>
                <dd>
@@ -1820,14 +1881,13 @@
                </dd>
                <dt id="text-area" about="#text-area" typeof="rdf:Property">text-area</dt>
                <dd about="#text-area" property="rdfs:comment" datatype="xsd:string">
-                  <p>An area of text in a comic 
- <a href="#panel">panel</a>. Used to represent titles, narrative text, character dialogue (inside a 
- <a href="#balloon">balloon</a> or not) and similar.</p>
+                  <p>An area of text in a comic <a href="#panel">panel</a>. Used to represent titles, narrative text,
+                     character dialogue (inside a <a href="#balloon">balloon</a> or not) and similar.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>
+                     <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>
                   </p>
                </dd>
                <dd>
@@ -1838,13 +1898,12 @@
                </dd>
                <dt id="sound-area" about="#sound-area" typeof="rdf:Property">sound-area</dt>
                <dd about="#sound-area" property="rdfs:comment" datatype="xsd:string">
-                  <p>An area of text in a comic 
- <a href="#panel">panel</a> that represents a sound.</p>
+                  <p>An area of text in a comic <a href="#panel">panel</a> that represents a sound.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">li</a>
+                     <a href="https://www.w3.org/TR/html/grouping-content.html#the-li-element">li</a>
                   </p>
                </dd>
                <dd>
@@ -1858,7 +1917,8 @@
          <div id="notes" about="#notes" typeof="rdf:Bag">
             <h2 id="h_notes" about="#notes" rev="dcterms:title">Notes and annotations</h2>
             <dl about="#notes" rev="rdfs:member">
-               <dt id="annotation" about="#annotation" typeof="rdf:Property">annotation<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="annotation" about="#annotation" typeof="rdf:Property">annotation<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#annotation" property="rdfs:comment" datatype="xsd:string">
                   <p>Explanatory information about passages in the work.</p>
@@ -1867,7 +1927,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#annotation" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#complementary">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#complementary">xhv:complementary</a>
                      </span>
                   </p>
@@ -1875,8 +1935,8 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a>, 
- <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a>, <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dd>
@@ -1887,32 +1947,33 @@
                      </span>
                   </p>
                </dd>
-               <dt id="note" about="#note" typeof="rdf:Property">note<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="note" about="#note" typeof="rdf:Property">note<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#note" property="rdfs:comment" datatype="xsd:string">
-                  <p>A note. This property does not carry spatial positioning semantics, as do the 
- <a href="#footnote">footnote</a> and 
- <a href="#endnote">endnote</a> properties. It can be used to identify footnotes, endnotes, marginal notes, inline notes, and similar when legacy naming conventions are not desired.</p>
+                  <p>A note. This property does not carry spatial positioning semantics, as do the <a href="#footnote"
+                        >footnote</a> and <a href="#endnote">endnote</a> properties. It can be used to identify footnotes,
+                     endnotes, marginal notes, inline notes, and similar when legacy naming conventions are not desired.</p>
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">HTML usage context: </span>On the 
- <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a> element when identifying a single note, or on descendants of sectioning content when identifying individual notes in a group (refer to 
- <a href="#footnotes">footnotes</a> and 
- <a href="#endnotes">endnotes</a>).</p>
+                     <span class="subproplabel">HTML usage context: </span>On the <a
+                        href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a> element when identifying
+                     a single note, or on descendants of sectioning content when identifying individual notes in a group
+                     (refer to <a href="#footnotes">footnotes</a> and <a href="#endnotes">endnotes</a>).</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Replaced by:</span>
                      <span class="subpropref" about="#note" rel="dcterms:isReplacedBy">
-                        <a href="#footnote">footnote</a>, 
- <a href="#endnote">endnote</a>
+                        <a href="#footnote">footnote</a>, <a href="#endnote">endnote</a>
                      </span>
                   </p>
                </dd>
                <dt id="footnote" about="#footnote" typeof="rdf:Property">footnote</dt>
                <dd about="#footnote" property="rdfs:comment" datatype="xsd:string">
-                  <p>Ancillary information, such as a citation or commentary, that provides additional context to a referenced passage of text.</p>
+                  <p>Ancillary information, such as a citation or commentary, that provides additional context to a
+                     referenced passage of text.</p>
                </dd>
                <dd>
                   <p>
@@ -1924,14 +1985,15 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">HTML usage context: </span>On the 
- <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a> element when identifying a single footnote, or on descendants of sectioning content when identifying individual footnotes in a group (refer to 
- <a href="#footnotes">footnotes</a> and 
- <a href="#endnotes">endnotes</a>).</p>
+                     <span class="subproplabel">HTML usage context: </span>On the <a
+                        href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a> element when identifying
+                     a single footnote, or on descendants of sectioning content when identifying individual footnotes in a
+                     group (refer to <a href="#footnotes">footnotes</a> and <a href="#endnotes">endnotes</a>).</p>
                </dd>
                <dt id="endnote" about="#endnote" typeof="rdf:Property">endnote</dt>
                <dd about="#endnote" property="rdfs:comment" datatype="xsd:string">
-                  <p>One of a collection of notes that occur at the end of a work, or a section within it, that provides additional context to a referenced passage of text.</p>
+                  <p>One of a collection of notes that occur at the end of a work, or a section within it, that provides
+                     additional context to a referenced passage of text.</p>
                </dd>
                <dd>
                   <p>
@@ -1943,12 +2005,13 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">HTML usage context: </span>On the 
- <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a> element when identifying a single endnote, or on descendants of sectioning content when identifying individual endnotes in a group (refer to 
- <a href="#footnotes">footnotes</a> and 
- <a href="#endnotes">endnotes</a>).</p>
+                     <span class="subproplabel">HTML usage context: </span>On the <a
+                        href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a> element when identifying
+                     a single endnote, or on descendants of sectioning content when identifying individual endnotes in a
+                     group (refer to <a href="#footnotes">footnotes</a> and <a href="#endnotes">endnotes</a>).</p>
                </dd>
-               <dt id="rearnote" about="#rearnote" typeof="rdf:Property">rearnote<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="rearnote" about="#rearnote" typeof="rdf:Property">rearnote<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#rearnote" property="rdfs:comment" datatype="xsd:string">
                   <p>A note appearing in the rear (backmatter) of the work, or at the end of a section.</p>
@@ -1963,10 +2026,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">HTML usage context: </span>On the 
- <a href="http://www.w3.org/TR/html5/sections.html#the-aside-element">aside</a> element when identifying a single rearnote, or on descendants of sectioning content when identifying individual rearnotes in a group (refer to 
- <a href="#footnotes">footnotes</a> and 
- <a href="#rearnotes">rearnotes</a>).</p>
+                     <span class="subproplabel">HTML usage context: </span>On the <a
+                        href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a> element when identifying
+                     a single rearnote, or on descendants of sectioning content when identifying individual rearnotes in a
+                     group (refer to <a href="#footnotes">footnotes</a> and <a href="#rearnotes">rearnotes</a>).</p>
                </dd>
                <dd>
                   <p>
@@ -1978,8 +2041,7 @@
                </dd>
                <dt id="footnotes" about="#footnotes" typeof="rdf:Property">footnotes</dt>
                <dd about="#footnotes" property="rdfs:comment" datatype="xsd:string">
-                  <p>A collection of 
- <a href="#footnote">footnotes</a>.</p>
+                  <p>A collection of <a href="#footnote">footnotes</a>.</p>
                </dd>
                <dd>
                   <p>
@@ -1992,7 +2054,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dt id="endnotes" about="#endnotes" typeof="rdf:Property">endnotes</dt>
@@ -2010,10 +2072,11 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
-               <dt id="rearnotes" about="#rearnotes" typeof="rdf:Property">rearnotes<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="rearnotes" about="#rearnotes" typeof="rdf:Property">rearnotes<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#rearnotes" property="rdfs:comment" datatype="xsd:string">
                   <p>A collection of notes appearing at the rear (backmatter) of the work, or at the end of a section.</p>
@@ -2029,7 +2092,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
                <dd>
@@ -2045,7 +2108,8 @@
          <div id="links" about="#links" typeof="rdf:Bag">
             <h2 id="h_links" about="#links" rev="dcterms:title">References</h2>
             <dl about="#links" rev="rdfs:member">
-               <dt id="annoref" about="#annoref" typeof="rdf:Property">annoref<span class="status deprecated" property="owl:deprecated" content="true"> [deprecated]</span>
+               <dt id="annoref" about="#annoref" typeof="rdf:Property">annoref<span class="status deprecated"
+                     property="owl:deprecated" content="true"> [deprecated]</span>
                </dt>
                <dd about="#annoref" property="rdfs:comment" datatype="xsd:string">
                   <p>A reference to an annotation.</p>
@@ -2054,7 +2118,7 @@
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#annoref" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#link">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#link">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#link">xhv:link</a>
                      </span>
                   </p>
@@ -2070,7 +2134,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                     <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                   </p>
                </dd>
                <dd>
@@ -2081,17 +2145,17 @@
                      </span>
                   </p>
                </dd>
-               <dt id="biblioref" about="#biblioref" typeof="rdf:Property">biblioref<span class="status draft"> [draft]</span>
+               <dt id="biblioref" about="#biblioref" typeof="rdf:Property">biblioref<span class="status draft">
+                     [draft]</span>
                </dt>
                <dd about="#biblioref" property="rdfs:comment" datatype="xsd:string">
-                  <p>A reference to a 
- <a href="#biblioentry">bibliography entry</a>.</p>
+                  <p>A reference to a <a href="#biblioentry">bibliography entry</a>.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#biblioref" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#link">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#link">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#link">xhv:link</a>
                      </span>
                   </p>
@@ -2099,20 +2163,19 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                     <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                   </p>
                </dd>
                <dt id="glossref" about="#glossref" typeof="rdf:Property">glossref<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#glossref" property="rdfs:comment" datatype="xsd:string">
-                  <p>A reference to a 
- <a href="#glossdef">glossary definition</a>.</p>
+                  <p>A reference to a <a href="#glossdef">glossary definition</a>.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#glossref" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#link">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#link">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#link">xhv:link</a>
                      </span>
                   </p>
@@ -2120,18 +2183,19 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                     <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                   </p>
                </dd>
                <dt id="noteref" about="#noteref" typeof="rdf:Property">noteref</dt>
                <dd about="#noteref" property="rdfs:comment" datatype="xsd:string">
-                  <p>A reference to a note, typically appearing as a superscripted number or symbol in the main body of text.</p>
+                  <p>A reference to a note, typically appearing as a superscripted number or symbol in the main body of
+                     text.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#noteref" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#link">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#link">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#link">xhv:link</a>
                      </span>
                   </p>
@@ -2147,22 +2211,21 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                     <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                   </p>
                </dd>
                <dt id="backlink" about="#backlink" typeof="rdf:Property">backlink<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#backlink" property="rdfs:comment" datatype="xsd:string">
-                  <p>A link that allows the user to return to a related location in the content (e.g., from a 
- <a href="#footnote">footnote</a> to its reference or from a 
- <a href="#glossdef">glossary definition</a> to where a 
- <a href="#glossterm">term</a> is used).</p>
+                  <p>A link that allows the user to return to a related location in the content (e.g., from a <a
+                        href="#footnote">footnote</a> to its reference or from a <a href="#glossdef">glossary definition</a>
+                     to where a <a href="#glossterm">term</a> is used).</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">Inherits from:</span>
                      <span class="subpropref" about="#backlink" rel="rdfs:subPropertyOf"
-                           resource="http://www.w3.org/1999/xhtml/vocab/#link">
+                        resource="http://www.w3.org/1999/xhtml/vocab/#link">
                         <a href="http://www.w3.org/1999/xhtml/vocab/#link">xhv:link</a>
                      </span>
                   </p>
@@ -2170,7 +2233,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a</a>
+                     <a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element">a</a>
                   </p>
                </dd>
             </dl>
@@ -2182,12 +2245,13 @@
                <dt id="credit" about="#credit" typeof="rdf:Property">credit<span class="status draft"> [draft]</span>
                </dt>
                <dd about="#credit" property="rdfs:comment" datatype="xsd:string">
-                  <p>An acknowledgment of the source of integrated content from third-party sources, such as photos. Typically identifies the creator, copyright and any restrictions on reuse.</p>
+                  <p>An acknowledgment of the source of integrated content from third-party sources, such as photos.
+                     Typically identifies the creator, copyright and any restrictions on reuse.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dt id="keyword" about="#keyword" typeof="rdf:Property">keyword</dt>
@@ -2197,7 +2261,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dt id="topic-sentence" about="#topic-sentence" typeof="rdf:Property">topic-sentence</dt>
@@ -2207,7 +2271,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
                <dt id="concluding-sentence" about="#concluding-sentence" typeof="rdf:Property">concluding-sentence</dt>
@@ -2217,7 +2281,7 @@
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing content</a>
                   </p>
                </dd>
             </dl>
@@ -2227,23 +2291,26 @@
             <dl about="#pagination" rev="rdfs:member">
                <dt id="pagebreak" about="#pagebreak" typeof="rdf:Property">pagebreak</dt>
                <dd about="#pagebreak" property="rdfs:comment" datatype="xsd:string">
-                  <p>A separator denoting the position before which a break occurs between two contiguous pages in a statically paginated version of the content.</p>
+                  <p>A separator denoting the position before which a break occurs between two contiguous pages in a
+                     statically paginated version of the content.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#phrasing-content">phrasing</a> and 
- <a href="http://www.w3.org/TR/html5/dom.html#flow-content">flow</a> content, where the value of the carrying elements title attribute takes precedence over element content for the purposes of representing the pagebreak value</p>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing</a> and <a
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow</a> content, where the value of the
+                     carrying elements title attribute takes precedence over element content for the purposes of representing
+                     the pagebreak value</p>
                </dd>
                <dt id="page-list" about="#page-list" typeof="rdf:Property">page-list</dt>
                <dd about="#page-list" property="rdfs:comment" datatype="xsd:string">
-                  <p>A navigational aid that provides a list of links to the 
- <a href="#pagebreak">pagebreaks</a> in the content.</p>
+                  <p>A navigational aid that provides a list of links to the <a href="#pagebreak">pagebreaks</a> in the
+                     content.</p>
                </dd>
                <dd>
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
-                     <a href="http://www.w3.org/TR/html5/dom.html#sectioning-content-0">sectioning content</a>
+                     <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content">sectioning content</a>
                   </p>
                </dd>
             </dl>
@@ -2261,9 +2328,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable table structure.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable table structure.</p>
                </dd>
                <dt id="table-row" about="#table-row" typeof="rdf:Property">table-row</dt>
                <dd about="#table-row" property="rdfs:comment" datatype="xsd:string">
@@ -2275,9 +2343,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable table row.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable table row.</p>
                </dd>
                <dt id="table-cell" about="#table-cell" typeof="rdf:Property">table-cell</dt>
                <dd about="#table-cell" property="rdfs:comment" datatype="xsd:string">
@@ -2289,9 +2358,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable table cell.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable table cell.</p>
                </dd>
             </dl>
          </div>
@@ -2308,9 +2378,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable list structure.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable list structure.</p>
                </dd>
                <dt id="list-item" about="#list-item" typeof="rdf:Property">list-item</dt>
                <dd about="#list-item" property="rdfs:comment" datatype="xsd:string">
@@ -2322,9 +2393,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable list item.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable list item.</p>
                </dd>
             </dl>
          </div>
@@ -2333,7 +2405,8 @@
             <dl about="#figures" rev="rdfs:member">
                <dt id="figure" about="#figure" typeof="rdf:Property">figure</dt>
                <dd about="#figure" property="rdfs:comment" datatype="xsd:string">
-                  <p>An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits.</p>
+                  <p>An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and
+                     typically annotated with a title, caption and/or credits.</p>
                </dd>
                <dd>
                   <p>
@@ -2341,9 +2414,10 @@
                </dd>
                <dd>
                   <p>
-                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or 
- <a href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or skippable figure.</p>
+                     <span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+                        href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an escapable or
+                     skippable figure.</p>
                </dd>
             </dl>
          </div>
