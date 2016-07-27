@@ -11,7 +11,7 @@
             <p><a href="http://www.idpf.org"><img src="http://idpf.org/sites/default/files/idpflogo_web_125.jpg" class="logo"
                         alt="IDPF" /></a></p>
             <h1 class="title">EPUB Accessibility Vocabulary</h1>
-            <p class="identity"><span class="pubdate">12 June 2016</span></p>
+            <p class="identity"><span class="pubdate">1 August 2016</span></p>
             <div class="history">
                 <span class="history-title">Document history</span>
                 <ul>
@@ -89,9 +89,9 @@
                     > </a> </span>2 Conformance Properties</h1>
 
 
-            <section class="section" id="sec-active-class">
+            <section class="section" id="sec-certifiedBy">
                 <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
-                            href="#sec-active-class"> </a> </span>2.1 certifiedBy</h2>
+                            href="#sec-certifiedBy"> </a> </span>2.1 certifiedBy</h2>
 
                 <div class="informaltable" id="certifiedBy">
                     <table
@@ -127,8 +127,7 @@
                             <tr>
                                 <td class="rdfa-property-header">Example:</td>
                                 <td class="entry">
-                                    <code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility Testers
-                                        Group&lt;/meta&gt;</code>
+                                    <code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility Testers Group&lt;/meta&gt;</code>
                                 </td>
                             </tr>
                         </tbody>
@@ -136,6 +135,54 @@
                 </div>
             </section>
 
+            <section class="section" id="sec-certifierCredential">
+                <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
+                    href="#sec-certifierCredential"> </a> </span>2.2 certifierCredential</h2>
+                
+                <div class="informaltable" id="certifierCredential">
+                    <table
+                        style="border-collapse: collapse; border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                            <col class="c1" />
+                            <col class="c2" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="rdfa-property-header">Name:</td>
+                                <td class="rdfa-property">
+                                    <span class="property">certifierCredential</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rdfa-property-header">Description:</td>
+                                <td class="rdfa-property-desc">Identifies a credential or badge that establishes the 
+                                    authority of the party identified in the
+                                    <a href="#sec-certifiedBy"><code class="markup">certifiedBy</code> property</a>
+                                    to certify content accessible.</td>
+                            </tr>
+                            <tr>
+                                <td class="rdfa-property-header">Allowed value(s):</td>
+                                <td class="entry">
+                                    <code class="datatype">xsd:string</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rdfa-property-header">Cardinality:</td>
+                                <td class="entry">
+                                    <code class="option">Zero or more</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rdfa-property-header">Example:</td>
+                                <td class="entry">
+                                    <code class="prop-example">&lt;meta property="a11y:certifierCredential"&gt;DAISY OK&lt;/meta&gt;</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
         </section>
     </body>
 </html>
