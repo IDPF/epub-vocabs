@@ -35,15 +35,22 @@
             </div>
         </header>
         <nav class="toc" id="toc"><h2 class="toc-title">Table of Contents</h2><ol class="toc">
-                <li><span class="chapter"><a href="#elemdef-opf-meta-overview">1. Overview</a></span><ol>
-                        <li><span class="section"><a href="#sec-purpose-scope">1.1. Purpose and Scope</a></span></li>
-                        <li><span class="section"><a href="#sec-ref">1.2. Referencing</a></span></li>
-                        <li><span class="section"><a href="#sec-terminology">1.3. Terminology</a></span></li>
-                    </ol></li>
-                <li><span class="chapter"><a href="#sec-meta-property-values">2. Conformance Properties</a></span><ol>
-                        <li><span class="section"><a href="#sec-active-class">2.1. certifiedBy</a></span></li>
-                    </ol></li>
-            </ol></nav>
+                <li><span class="chapter"><a href="#elemdef-opf-meta-overview">1. Overview</a></span>
+                    <ol>
+                        <li><span class="section"><a href="#sec-purpose-scope">1.1 Purpose and Scope</a></span></li>
+                        <li><span class="section"><a href="#sec-ref">1.2 Referencing</a></span></li>
+                        <li><span class="section"><a href="#sec-terminology">1.3 Terminology</a></span></li>
+                    </ol>
+                </li>
+                <li><span class="chapter"><a href="#sec-meta-property-values">2. Conformance Properties</a></span>
+                    <ol>
+                        <li><span class="section"><a href="#sec-certifiedBy">2.1 certifiedBy</a></span></li>
+                        <li><span class="section"><a href="#sec-certifierCredential">2.2 certifierCredential</a></span></li>
+                        <li><span class="section"><a href="#sec-certifierReport">2.3 certifierReport</a></span></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
         <section class="chapter" id="elemdef-opf-meta-overview">
             <h1 class="title"><span class="link-marker"><a class="hidden-reveal" href="#elemdef-opf-meta-overview"
                     > </a> </span>1 Overview</h1>
@@ -90,8 +97,8 @@
 
 
             <section class="section" id="sec-certifiedBy">
-                <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
-                            href="#sec-certifiedBy"> </a> </span>2.1 certifiedBy</h2>
+                <h2 class="title"><span class="link-marker"><a class="hidden-reveal" href="#sec-certifiedBy"> </a> </span>2.1
+                    certifiedBy</h2>
 
                 <div class="informaltable" id="certifiedBy">
                     <table
@@ -127,7 +134,8 @@
                             <tr>
                                 <td class="vocab-property-header">Example:</td>
                                 <td class="entry">
-                                    <code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility Testers Group&lt;/meta&gt;</code>
+                                    <code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility Testers
+                                        Group&lt;/meta&gt;</code>
                                 </td>
                             </tr>
                         </tbody>
@@ -136,9 +144,9 @@
             </section>
 
             <section class="section" id="sec-certifierCredential">
-                <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
-                    href="#sec-certifierCredential"> </a> </span>2.2 certifierCredential</h2>
-                
+                <h2 class="title"><span class="link-marker"><a class="hidden-reveal" href="#sec-certifierCredential"
+                        > </a> </span>2.2 certifierCredential</h2>
+
                 <div class="informaltable" id="certifierCredential">
                     <table
                         style="border-collapse: collapse; border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
@@ -155,10 +163,9 @@
                             </tr>
                             <tr>
                                 <td class="vocab-property-header">Description:</td>
-                                <td class="vocab-property-desc">Identifies a credential or badge that establishes the 
-                                    authority of the party identified in the
-                                    <a href="#sec-certifiedBy"><code class="markup">certifiedBy</code> property</a>
-                                    to certify content accessible.</td>
+                                <td class="vocab-property-desc">Identifies a credential or badge that establishes the
+                                    authority of the party identified in the <a href="#sec-certifiedBy"><code class="markup"
+                                            >certifiedBy</code> property</a> to certify content accessible.</td>
                             </tr>
                             <tr>
                                 <td class="vocab-property-header">Allowed value(s):</td>
@@ -175,14 +182,61 @@
                             <tr>
                                 <td class="vocab-property-header">Example:</td>
                                 <td class="entry">
-                                    <code class="prop-example">&lt;meta property="a11y:certifierCredential"&gt;DAISY OK&lt;/meta&gt;</code>
+                                    <code class="prop-example">&lt;meta property="a11y:certifierCredential"&gt;DAISY
+                                        OK&lt;/meta&gt;</code>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
-            
+
+            <section class="section" id="sec-certifierReport">
+                <h2 class="title"><span class="link-marker"><a class="hidden-reveal" href="#sec-certifierReport"
+                        > </a> </span>2.3 certifierReport</h2>
+
+                <div class="informaltable" id="certifierReport">
+                    <table
+                        style="border-collapse: collapse; border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                            <col class="c1" />
+                            <col class="c2" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="vocab-property-header">Name:</td>
+                                <td class="vocab-property">
+                                    <span class="property">certifierReport</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vocab-property-header">Description:</td>
+                                <td class="vocab-property-desc">Provides a link to an accessibility report created by the
+                                    party identified in the <a href="#sec-certifiedBy"><code class="markup"
+                                            >certifiedBy</code> property</a>.</td>
+                            </tr>
+                            <tr>
+                                <td class="vocab-property-header">Allowed value(s):</td>
+                                <td class="entry">
+                                    <code class="datatype">xsd:anyURI</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vocab-property-header">Cardinality:</td>
+                                <td class="entry">
+                                    <code class="option">Zero or more</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vocab-property-header">Example:</td>
+                                <td class="entry">
+                                    <code class="prop-example">&lt;link rel="a11y:certifierReport" href="http://example.com/a11y/reports/9780000000001"/&gt;</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </section>
     </body>
 </html>
