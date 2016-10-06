@@ -11,7 +11,9 @@
             <p><a href="http://www.idpf.org"><img src="http://idpf.org/sites/default/files/idpflogo_web_125.jpg" class="logo"
                         alt="IDPF" /></a></p>
             <h1 class="title">EPUB Spine Properties Vocabulary</h1>
-            <p class="identity"><span class="pubdate">17 June 2016</span></p>
+            <p class="identity">
+                <span class="pubdate">5 October 2016</span>
+            </p>
             <dl class="printhistory">
                 <dt>This version</dt>
                 <dd><a href="http://www.idpf.org/epub/vocab/package/itemref/epub-vocab-itemref-20160617.html"
@@ -46,17 +48,30 @@
                 </div>
             </div>
         </header>
+        <section id="sotd" class="section">
+            <h2>Status of this Document</h2>
+            <p>This document is subject to change at any time. The terms defined herein will never be removed, but may be
+                deprecated.</p>
+            <p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
+            <p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms
+                are no longer recommended for use.</p>
+            <p>Requests for additions, modifications and clarifications can be made through the <a
+                    href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a
+                    href="https://github.com/IDPF/epub-vocabs/pulls">Pull requests</a> are also welcome.</p>
+            <p>Refer to the <a href="https://idpf.github.io/epub-guides/reporting-issues/">IDPF Issue Reporting
+                    Guidelines</a> for more information about the change request process.</p>
+        </section>
         <nav class="toc" id="toc"><h2 class="toc-title">Table of Contents</h2><ol class="toc">
                 <li><span class="chapter"><a href="#elemdef-opf-meta-overview">1. Overview</a></span><ol>
-                        <li><span class="section"><a href="#sec-purpose-scope">1.1. Purpose and Scope</a></span></li>
-                        <li><span class="section"><a href="#sec-ref">1.2. Referencing</a></span></li>
-                        <li><span class="section"><a href="#sec-terminology">1.3. Terminology</a></span></li>
+                        <li><span class="section"><a href="#sec-purpose-scope">1.1 About this Vocabulary</a></span></li>
+                        <li><span class="section"><a href="#sec-ref">1.2 Referencing</a></span></li>
+                        <li><span class="section"><a href="#sec-terminology">1.3 Terminology</a></span></li>
                     </ol></li>
                 <li><span class="chapter"><a href="#sec-itemref-property-values">2. Spine <code class="markup">itemref</code>
                             Properties</a></span><ol>
-                        <li><span class="section"><a href="#sec-page-spread-left">2.1. page-spread-left</a></span></li>
-                        <li><span class="section"><a href="#sec-page-spread-right">2.2. page-spread-right</a></span></li>
-                        <li><span class="section"><a href="#examples-itemref-properties">2.3. Examples</a></span></li>
+                        <li><span class="section"><a href="#sec-page-spread-left">2.1 page-spread-left</a></span></li>
+                        <li><span class="section"><a href="#sec-page-spread-right">2.2 page-spread-right</a></span></li>
+                        <li><span class="section"><a href="#examples-itemref-properties">2.3 Examples</a></span></li>
                     </ol></li>
                 <li><span class="bibliography"><a href="#references">References</a></span></li>
             </ol></nav>
@@ -65,32 +80,28 @@
                     > </a> </span>1 Overview</h1>
 
 
-            <section class="section" id="sec-purpose-scope">
-                <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
-                            href="#sec-purpose-scope"> </a> </span>1.1 Purpose and Scope</h2>
+            <section class="section" id="sec-about">
+                <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal" href="#sec-about"
+                            > </a> </span>1.1 About this Vocabulary</h2>
                 <p class="informative"> This section is informative</p>
 
-                <p> This vocabulary, a part of EPUB® 3, defines a set of properties for describing various features of the
-                        <span class="phrase"><a class="ulink" href="../../../31/spec/epub-packages.html#sec-package-doc"
-                            target="_top">Package Document</a>
-                        <a class="biblioref" href="#refPackages3" title="EPUB Packages 3.1">[<abbr class="abbrev"
-                                >Packages31</abbr>]</a></span>.</p>
+                <p> This vocabulary defines a set of properties for describing various features of the <span class="phrase"
+                            ><a class="ulink" href="http://www.idpf.org/epub3/latest/packages#sec-package-doc" target="_top"
+                            >Package Document</a>
+                        <a class="biblioref" href="#refPackages3" title="EPUB Packages 3">[<abbr class="abbrev"
+                                >Packages3</abbr>]</a></span>.</p>
                 <p>The properties in this vocabulary are usable in the various Package Document attributes that accept the
                         <span class="phrase"><a class="ulink"
-                            href="../../../31/spec/epub-packages.html#sec-property-datatype" target="_top">property
+                            href="http://www.idpf.org/epub3/latest/packages#sec-property-datatype" target="_top">property
                             datatype</a>
-                        <a class="biblioref" href="#refPackages3" title="EPUB Packages 3.1">[<abbr class="abbrev"
-                                >Packages31</abbr>]</a></span>, and are grouped by the element and attribute that they can be
+                        <a class="biblioref" href="#refPackages3" title="EPUB Packages 3">[<abbr class="abbrev"
+                                >Packages3</abbr>]</a></span>, and are grouped by the element and attribute that they can be
                     used in.</p>
-                <p>This vocabulary is a companion to the <a class="biblioref" href="#refPackages3" title="EPUB Packages 3.1"
-                            >[<abbr class="abbrev">Packages31</abbr>]</a> specification and is intended to be read in
-                    conjunction with that document.</p>
             </section>
 
             <section class="section" id="sec-ref">
                 <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal" href="#sec-ref"
                             > </a> </span>1.2 Referencing</h2>
-
 
                 <p>Properties are referenceable using the base IRI <code class="uri"
                         >http://idpf.org/epub/vocab/package/#</code>.</p>
@@ -100,11 +111,11 @@
                 <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
                             href="#sec-terminology"> </a> </span>1.3 Terminology</h2>
 
-                <p>Terms with meanings specific to EPUB 3.1 are capitalized in this document (e.g., "Author", "Reading
+                <p>Terms with meanings specific to EPUB 3 are capitalized in this document (e.g., "Author", "Reading
                     System"). A complete list of these <span class="phrase"><a class="ulink"
-                            href="../../../31/spec/epub-spec.html#sec-terminology" target="_top">terms and
-                        definitions</a></span> is provided in <a class="biblioref" href="#refEPUB3" title="EPUB 3.1">[<abbr
-                            class="abbrev">EPUB31</abbr>]</a>.</p>
+                            href="http://www.idpf.org/epub3/latest#sec-terminology" target="_top">terms and
+                        definitions</a></span> is provided in <a class="biblioref" href="#refEPUB3" title="EPUB 3">[<abbr
+                            class="abbrev">EPUB3</abbr>]</a>.</p>
                 <p>Only the first instance of a term in a section is linked to its definition.</p>
             </section>
         </section>
@@ -114,13 +125,14 @@
 
 
             <p>The following tables define properties for use in the <span class="phrase"><a class="ulink"
-                        href="../../../31/spec/epub-packages.html#sec-itemref-elem" target="_top">itemref element</a>
-                    <a class="biblioref" href="#refPackages3" title="EPUB Packages 3.1">[<abbr class="abbrev"
-                            >Packages31</abbr>]</a></span>
-                <span class="phrase"><a class="ulink" href="../../../31/spec/epub-packages.html#attrdef-itemref-properties"
-                        target="_top">properties attribute</a>
-                    <a class="biblioref" href="#refPackages3" title="EPUB Packages 3.1">[<abbr class="abbrev"
-                            >Packages31</abbr>]</a></span>.</p>
+                        href="http://www.idpf.org/epub3/latest/packages#sec-itemref-elem" target="_top">itemref element</a>
+                    <a class="biblioref" href="#refPackages3" title="EPUB Packages 3">[<abbr class="abbrev"
+                        >Packages3</abbr>]</a></span>
+                <span class="phrase"><a class="ulink"
+                        href="http://www.idpf.org/epub3/latest/packages#attrdef-itemref-properties" target="_top">properties
+                        attribute</a>
+                    <a class="biblioref" href="#refPackages3" title="EPUB Packages 3">[<abbr class="abbrev"
+                        >Packages3</abbr>]</a></span>.</p>
 
             <section class="section" id="sec-page-spread-left">
                 <h2 class="title" style="clear: both"><span class="link-marker"><a class="hidden-reveal"
@@ -145,7 +157,7 @@
                                 <td class="vocab-property-desc">The <span class="property">page-spread-left</span> property
                                     indicates that the first page of the associated <code class="markup">item</code>
                                     element's <span class="phrase"><a class="glossterm"
-                                            href="../../../31/spec/epub-spec.html#gloss-content-document-epub" target="_top"
+                                            href="http://www.idpf.org/epub3/latest#gloss-content-document-epub" target="_top"
                                             >EPUB Content Document</a></span> represents the left-hand side of a two-page
                                     spread.</td>
                             </tr>
@@ -176,7 +188,7 @@
                                 <td class="vocab-property-desc">The <span class="property">page-spread-right</span> property
                                     indicates that the first page of the associated <code class="markup">item</code>
                                     element's <span class="phrase"><a class="glossterm"
-                                            href="../../../31/spec/epub-spec.html#gloss-content-document-epub" target="_top"
+                                            href="http://www.idpf.org/epub3/latest#gloss-content-document-epub" target="_top"
                                             >EPUB Content Document</a></span> represents the right-hand side of a two-page
                                     spread.</td>
                             </tr>
@@ -218,15 +230,15 @@
                 <h3 class="title">Normative References</h3>
 
                 <div class="biblioentry" id="refEPUB3">
-                    <p>[<abbr class="abbrev">EPUB31</abbr>] <span class="title"><em>
-                                <a class="ulink" href="../../../31/spec/epub-spec.html" target="_top">EPUB 3.1</a>
+                    <p>[<abbr class="abbrev">EPUB3</abbr>] <span class="title"><em>
+                                <a class="ulink" href="http://www.idpf.org/epub3/latest" target="_top">EPUB 3</a>
                             </em>. </span>
                     </p>
                 </div>
                 <div class="biblioentry" id="refPackages3">
-                    <p>[<abbr class="abbrev">Packages31</abbr>] <span class="title"><em>
-                                <a class="ulink" href="../../../31/spec/epub-packages.html" target="_top">EPUB Packages
-                                    3.1</a>
+                    <p>[<abbr class="abbrev">Packages3</abbr>] <span class="title"><em>
+                                <a class="ulink" href="http://www.idpf.org/epub3/latest/packages" target="_top">EPUB Packages
+                                    3</a>
                             </em>. </span>
                     </p>
                 </div>

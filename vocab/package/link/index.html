@@ -8,20 +8,39 @@
 		<meta name="dcterms:publisher" content="International Digital Publishing Forum (IDPF)" />
 		<link rel="stylesheet" type="text/css" href="../../css/vocabs.css" />
 		<style>
-			dl { margin: 2em 0; padding: 0.25em 0.5em 1em 1em; background-color: rgb(236,246,255); border-left: 5px solid rgb(145,200,255) }
-			dt { font-weight: bold; font-size: 90%; padding: 0 0 0.5em 0; }
-			code { color: rgb(102,0,0) !important; }
-			code.example { font-size: 1.1em; display: block; color: rgb(0,0,0) !important; }
-			dl > dt:first-child { font-size: 120%; }
-			span.status { font-size: 65%; }
-		</style>
+			dl{
+			    margin: 2em 0;
+			    padding: 0.25em 0.5em 1em 1em;
+			    background-color: rgb(236, 246, 255);
+			    border-left: 5px solid rgb(145, 200, 255)
+			}
+			dt{
+			    font-weight: bold;
+			    font-size: 90%;
+			    padding: 0 0 0.5em 0;
+			}
+			code{
+			    color: rgb(102, 0, 0) !important;
+			}
+			code.example{
+			    font-size: 1.1em;
+			    display: block;
+			    color: rgb(0, 0, 0) !important;
+			}
+			dl > dt:first-child{
+			    font-size: 120%;
+			}
+			span.status{
+			    font-size: 65%;
+			}</style>
 	</head>
 	<body>
 		<header>
-			<p><a href="http://www.idpf.org"><img src="http://www.idpf.org/epub/images/idpflogo_web_125.jpg" alt="IDPF" class="logo"/></a></p>
+			<p><a href="http://www.idpf.org"><img src="http://www.idpf.org/epub/images/idpflogo_web_125.jpg" alt="IDPF"
+						class="logo" /></a></p>
 			<h1 class="title">EPUB Metadata Link Vocabulary</h1>
 			<p class="identity">
-				<span class="pubdate">30 January 2016</span>
+				<span class="pubdate">5 October 2016</span>
 			</p>
 			<div class="printhistory">
 				<div class="history">
@@ -29,8 +48,7 @@
 					<ul>
 						<li><a href="https://github.com/IDPF/epub-vocabs/commits/master/vocab/package/link/index.html"
 								>Changes to this document</a></li>
-						<li><a href="https://github.com/IDPF/epub-vocabs/issues"
-							>Issue Tracker</a></li>
+						<li><a href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a></li>
 					</ul>
 				</div>
 			</div>
@@ -39,21 +57,21 @@
 			<h2>Status of this Document</h2>
 			<p>This document is subject to change at any time. The terms defined herein will never be removed, but may be
 				deprecated.</p>
-			<p>Any use of the terms marked <span class="status draft">[DRAFT]</span> should be considered experimental.</p>
-			<p>Deprecated term are identified by the label <span class="status deprecated">[DEPRECATED]</span>. These terms
+			<p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
+			<p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms
 				are no longer recommended for use.</p>
-			<p>Terms without a label are considered stable.</p>
-			<p>Requests for additions, modifications and clarifications can be made through the <a 
-				href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a 
+			<p>Requests for additions, modifications and clarifications can be made through the <a
+					href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a
 					href="https://github.com/IDPF/epub-vocabs/pulls">Pull requests</a> are also welcome.</p>
+			<p>Refer to the <a href="https://idpf.github.io/epub-guides/reporting-issues/">IDPF Issue Reporting
+					Guidelines</a> for more information about the change request process.</p>
 		</section>
-		
 		<nav id="toc" class="toc">
 			<h2 class="toc-title">Table of Contents</h2>
 			<ol class="toc">
 				<li><span class="section"><a href="#sec-overview">1. Overview</a></span>
 					<ol>
-						<li><span class="section"><a href="#sec-purpose-scope">1.1 Purpose and Scope</a></span></li>
+						<li><span class="section"><a href="#sec-purpose-scope">1.1 About this Vocabulary</a></span></li>
 						<li><span class="section"><a href="#sec-terminology">1.2 Terminology</a></span></li>
 					</ol>
 				</li>
@@ -64,67 +82,64 @@
 		</nav>
 		<section id="sec-overview" class="chapter">
 			<h1 class="title">1. Overview</h1>
-			
-			<section id="sec-purpose-scope" class="section">
-				<h2>1.1 Purpose and Scope</h2>
+
+			<section id="sec-about" class="section">
+				<h2>1.1 About this Vocabulary</h2>
 				<p>This document defines relationships and properties for use with the EPUB® <a
 						href="http://www.idpf.org/epub3/latest/#gloss-package-document">Package Document</a>
-					<a href="http://www.idpf.org/epub3/latest/packages/#sec-link-elem"
-						title="3.4.9 The link Element"><code>link</code> element</a>
+					<a href="http://www.idpf.org/epub3/latest/packages/#sec-link-elem" title="3.4.9 The link Element"
+							><code>link</code> element</a>
 					<a href="#refPackages3">[Packages3]</a>.</p>
 			</section>
-			
+
 			<section class="section" id="sec-terminology">
 				<h2 class="title">1.2 Terminology</h2>
-				<p>Terms with meanings specific to EPUB 3.1 are capitalized in this document. A complete list of these <span
+				<p>Terms with meanings specific to EPUB 3 are capitalized in this document. A complete list of these <span
 						class="phrase"><a class="ulink" href="http://www.idpf.org/epub3/latest/#sec-terminology"
-							target="_top">terms and definitions</a></span> is provided in <a
-						href="#refEPUB3" title="EPUB 3">[<abbr class="abbrev">EPUB3</abbr>]</a>.</p>
+							target="_top">terms and definitions</a></span> is provided in <a href="#refEPUB3" title="EPUB 3"
+							>[<abbr class="abbrev">EPUB3</abbr>]</a>.</p>
 				<p>Only the first instance of a term in a section is linked to its definition.</p>
 			</section>
 		</section>
-		
 		<section id="sec-link-rel" class="chapter">
 			<h1 class="title">2. Link Relationships</h1>
-			
-			<p>The following values can be used in the <code>link</code> element <a 
-					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-rel"><code>rel</code>
-					attribute</a> to establish the relationship of the resource referenced in the <a 
-					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-href"><code>href</code>
-					attribute</a>
+
+			<p>The following values can be used in the <code>link</code> element <a
+					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-rel"><code>rel</code> attribute</a> to
+				establish the relationship of the resource referenced in the <a
+					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-href"><code>href</code> attribute</a>
 				<a href="#refPackages3">[Packages3]</a>.</p>
-			
+
 			<dl id="acquire">
 				<dt><span class="property">acquire</span></dt>
-				<dd>The <span class="property">acquire</span> keyword is used
-					with <a href="http://www.idpf.org/epub/previews">EPUB Previews</a> to identify where the
-					full version of the <a
-						href="http://www.idpf.org/epub3/latest/#gloss-epub-publication">EPUB
-						Publication</a> can be acquired.</dd>
+				<dd>The <span class="property">acquire</span> keyword is used with <a
+						href="http://www.idpf.org/epub/previews">EPUB Previews</a> to identify where the full version of the
+						<a href="http://www.idpf.org/epub3/latest/#gloss-epub-publication">EPUB Publication</a> can be
+					acquired.</dd>
 				<dt>Cardinality:</dt>
 				<dd>Zero or more</dd>
 				<dt>Example:</dt>
 				<dd>
-					<code class="example">&lt;link rel="acquire"
-						href="http://example.org/book/9781448103706" media-type="text/html"/&gt;</code>
+					<code class="example">&lt;link rel="acquire" href="http://example.org/book/9781448103706"
+						media-type="text/html"/&gt;</code>
 				</dd>
 			</dl>
-			
+
 			<dl id="alternate">
 				<dt><span class="property">alternate</span></dt>
-				<dd><p>The <span class="property">alternate</span> keyword is a subset of the 
-					<a href="https://www.w3.org/TR/html/links.html#link-type-alternate">HTML 
-					<code>alternate</code> keyword</a> for links. It differs as follows:</p>
+				<dd><p>The <span class="property">alternate</span> keyword is a subset of the <a
+							href="https://www.w3.org/TR/html/links.html#link-type-alternate">HTML <code>alternate</code>
+							keyword</a> for links. It differs as follows:</p>
 					<ul>
 						<li>It cannot be paired with other keywords.</li>
-						<li>If an alternate link is included in the Package Document metadata, it identifies
-							an alternate representation of the Package Document in the format specified in the
-							<code>media-type</code> attribute.</li>
-						<li>If an alternate link is included in a <a 
-							href="http://www.idpf.org/epub3/latest/packages/#sec-collection-elem"><code>collection</code>
-							element's</a> metadata <a href="#refPackages3">[Packages3]</a>, it identifies
-							an alternate representation of the <code>collection</code> in the format specified in the
-							<code>media-type</code> attribute.</li>
+						<li>If an alternate link is included in the Package Document metadata, it identifies an alternate
+							representation of the Package Document in the format specified in the <code>media-type</code>
+							attribute.</li>
+						<li>If an alternate link is included in a <a
+								href="http://www.idpf.org/epub3/latest/packages/#sec-collection-elem"><code>collection</code>
+								element's</a> metadata <a href="#refPackages3">[Packages3]</a>, it identifies an alternate
+							representation of the <code>collection</code> in the format specified in the
+								<code>media-type</code> attribute.</li>
 						<li>Reading Systems do not have to generate hyperlinks for alternate links.</li>
 					</ul>
 				</dd>
@@ -132,52 +147,52 @@
 				<dd>Zero or more</dd>
 				<dt>Example:</dt>
 				<dd>
-					<code class="example">&lt;link rel="alternate"
-						href="package.json" media-type="application/json-ld"/&gt;</code>
+					<code class="example">&lt;link rel="alternate" href="package.json"
+						media-type="application/json-ld"/&gt;</code>
 				</dd>
 			</dl>
-			
+
 			<dl id="marc21xml-record">
-				<dt><span class="property">marc21xml-record</span>  <span class="status deprecated">[DEPRECATED]</span></dt>
-				<dd>Use of the <span
-						class="property">marc21xml-record</span> keyword is deprecated. It is replaced
-					by the <a href="#record"><span class="property">record</span></a> keyword with the
-						<a href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-media-type"
-							><code>media-type</code> attribute</a>
-					<a href="#refPackages3">[Packages3]</a> value
-					"<code>application/marcxml+xml</code>".</dd>
+				<dt><span class="property">marc21xml-record</span>
+					<span class="status deprecated">[DEPRECATED]</span></dt>
+				<dd>Use of the <span class="property">marc21xml-record</span> keyword is deprecated. It is replaced by the <a
+						href="#record"><span class="property">record</span></a> keyword with the <a
+						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-media-type"><code>media-type</code>
+						attribute</a>
+					<a href="#refPackages3">[Packages3]</a> value "<code>application/marcxml+xml</code>".</dd>
 			</dl>
-			
+
 			<dl id="mods-record">
-				<dt><span class="property">mods-record</span>  <span class="status deprecated">[DEPRECATED]</span></dt>
-				<dd>Use of the <span
-					class="property">mods-record</span> keyword is deprecated. It is replaced by the
-					<a href="#record"><span class="property">record</span></a> keyword with the <a
-						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-media-type"
-							><code>media-type</code> attribute</a>
+				<dt><span class="property">mods-record</span>
+					<span class="status deprecated">[DEPRECATED]</span></dt>
+				<dd>Use of the <span class="property">mods-record</span> keyword is deprecated. It is replaced by the <a
+						href="#record"><span class="property">record</span></a> keyword with the <a
+						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-media-type"><code>media-type</code>
+						attribute</a>
 					<a href="#refPackages3">[Packages3]</a> value "<code>application/mods+xml</code>".</dd>
 			</dl>
-			
+
 			<dl id="onix-record">
-				<dt><span class="property">onix-record</span>  <span class="status deprecated">[DEPRECATED]</span></dt>
-				<dd>Use of the <span
-					class="property">onix-record</span> keyword is deprecated. It is replaced by the
-					<a href="#record"><span class="property">record</span></a> keyword with the <a
-						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-properties">properties
-						attribute</a>
+				<dt><span class="property">onix-record</span>
+					<span class="status deprecated">[DEPRECATED]</span></dt>
+				<dd>Use of the <span class="property">onix-record</span> keyword is deprecated. It is replaced by the <a
+						href="#record"><span class="property">record</span></a> keyword with the <a
+						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-properties">properties attribute</a>
 					<a href="#refPackages3">[Packages3]</a> value <a href="#onix"><code>onix</code></a>.</dd>
 			</dl>
-			
+
 			<dl id="record">
 				<dt><span class="property">record</span></dt>
 				<dd>
 					<p>Indicates that the referenced resource is a metadata record.</p>
 					<p>The media type of the record is identified in the <a
-							href="http://www.idpf.org/epub3/latest/packages#attrdef-link-media-type"><code>media-type</code> attribute</a>
+							href="http://www.idpf.org/epub3/latest/packages#attrdef-link-media-type"><code>media-type</code>
+							attribute</a>
 						<a href="#refPackages3">[Packages3]</a> when this keyword is specified.</p>
-					<p>If the type of record cannot be identified from the media type, an <a
-							href="#sec-link-properties">identifier property</a> can be assigned in the <a
-							href="http://www.idpf.org/epub3/latest/packages#attrdef-link-properties"><code>properties</code> attribute</a>
+					<p>If the type of record cannot be identified from the media type, an <a href="#sec-link-properties"
+							>identifier property</a> can be assigned in the <a
+							href="http://www.idpf.org/epub3/latest/packages#attrdef-link-properties"><code>properties</code>
+							attribute</a>
 						<a href="#refPackages3">[Packages3]</a>.</p>
 				</dd>
 				<dt>Cardinality:</dt>
@@ -188,62 +203,58 @@
 						media-type="application/atom+xml;type=entry;profile=opds-catalog"/&gt;</code>
 				</dd>
 			</dl>
-			
+
 			<dl id="xml-signature">
-				<dt><span class="property">xml-signature</span> <span class="status deprecated">[DEPRECATED]</span></dt>
+				<dt><span class="property">xml-signature</span>
+					<span class="status deprecated">[DEPRECATED]</span></dt>
 				<dd>
-					<p>Use of the <span class="property">xml-signature</span> keyword is deprecated. It is not replaced
-						by another linking method. Identification of XML signatures will be addressed in a future version
-						of EPUB.</p>
+					<p>Use of the <span class="property">xml-signature</span> keyword is deprecated. It is not replaced by
+						another linking method. Identification of XML signatures will be addressed in a future version of
+						EPUB.</p>
 				</dd>
 			</dl>
-			
+
 			<dl id="xmp-record">
-				<dt><span class="property">xmp-record</span> <span class="status deprecated">[DEPRECATED]</span></dt>
-				<dd>Use of the <span
-					class="property">xmp-record</span> keyword is deprecated. It is replaced by the
-					<a href="#record"><span class="property">record</span></a> keyword with the <a
-						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-properties">properties
-						attribute</a> value <a href="#xmp"><code>xmp</code></a>.</dd>
+				<dt><span class="property">xmp-record</span>
+					<span class="status deprecated">[DEPRECATED]</span></dt>
+				<dd>Use of the <span class="property">xmp-record</span> keyword is deprecated. It is replaced by the <a
+						href="#record"><span class="property">record</span></a> keyword with the <a
+						href="http://www.idpf.org/epub3/latest/packages/#attrdef-link-properties">properties attribute</a>
+					value <a href="#xmp"><code>xmp</code></a>.</dd>
 			</dl>
 		</section>
-		
 		<section id="sec-link-properties" class="chapter">
 			<h1 class="title">3. Link Properties</h1>
-			<p>The following values can be used in the <code>link</code> element <a 
-					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-rel"><code>rel</code>
-					attribute</a>
+			<p>The following values can be used in the <code>link</code> element <a
+					href="http://www.idpf.org/epub3/latest/packages#attrdef-link-rel"><code>rel</code> attribute</a>
 				<a href="#refPackages3">[Packages3]</a> to establish the type of record a referenced resource represents.
 				These values are provided for record formats that cannot be uniquely identified by their media type.</p>
-			
+
 			<dl id="onix">
-				<dt><span class="property">onix</span> <span class="status draft">[DRAFT]</span></dt>
-				<dd>The <span class="property">onix</span> property indicates the
-					referenced resource is an ONIX record <a href="#refONIX"
-							>[<abbr>ONIX</abbr>]</a>. </dd>
+				<dt><span class="property">onix</span></dt>
+				<dd>The <span class="property">onix</span> property indicates the referenced resource is an ONIX record <a
+						href="#refONIX">[<abbr>ONIX</abbr>]</a>. </dd>
 				<dt>Example:</dt>
 				<dd>
 					<code class="example">&lt;link rel="record" href="pub/meta/nor-wood-onix.xml"
 						media-type="application/xml" properties="onix"/&gt;</code>
 				</dd>
 			</dl>
-			
+
 			<dl id="xmp">
-				<dt><span class="property">xmp</span> <span class="status draft">[DRAFT]</span></dt>
-				<dd>The <span class="property">xmp</span> property indicates the
-					referenced resource is an XMP record <a href="#refXMP"
-							>[<abbr>XMP</abbr>]</a>. </dd>
+				<dt><span class="property">xmp</span></dt>
+				<dd>The <span class="property">xmp</span> property indicates the referenced resource is an XMP record <a
+						href="#refXMP">[<abbr>XMP</abbr>]</a>. </dd>
 				<dt>Example:</dt>
 				<dd>
-					<code class="example">&lt;link rel="record" href="pub/meta/nor-wood-xmp.xml
-						media-type="application/xml" properties="xmp"/&gt;</code>
+					<code class="example">&lt;link rel="record" href="pub/meta/nor-wood-xmp.xml media-type="application/xml"
+						properties="xmp"/&gt;</code>
 				</dd>
 			</dl>
 		</section>
-		
 		<section class="bibliography" id="references">
 			<h1 class="title">References</h1>
-			
+
 			<div class="bibliodiv" id="normative-refs">
 				<h3 class="title">Normative References</h3>
 				<div class="biblioentry" id="refEPUB3">
@@ -254,24 +265,26 @@
 				</div>
 				<div class="biblioentry" id="refMODS">
 					<p>[<abbr class="abbrev">MODS</abbr>] <span class="title"><em>
-								<a class="ulink" href="http://www.loc.gov/standards/mods/">Metadata Object
-									Description Schema (MODS)</a>
+								<a class="ulink" href="http://www.loc.gov/standards/mods/">Metadata Object Description Schema
+									(MODS)</a>
 							</em>. </span>
 					</p>
 				</div>
 				<div class="biblioentry" id="refOCF3">
 					<p>[<abbr>OCF3</abbr>] <span class="title">
-							<em><a class="link" href="http://www.idpf.org/epub3/latest/ocf">Open Container Format 3</a></em>. </span>
+							<em><a class="link" href="http://www.idpf.org/epub3/latest/ocf">Open Container Format 3</a></em>.
+						</span>
 					</p>
 				</div>
 				<div class="biblioentry" id="refONIX">
 					<p>[<abbr class="abbrev">ONIX</abbr>] <span class="title"><em>
-						<a class="ulink" href="http://www.editeur.org/8/ONIX/">ONIX for Books</a>
-					</em>. </span>
+								<a class="ulink" href="http://www.editeur.org/8/ONIX/">ONIX for Books</a>
+							</em>. </span>
 					</p>
 				</div>
 				<div class="biblioentry" id="refPackages3">
-					<p>[<abbr class="abbrev">Packages3</abbr>] <span class="title"><em><a class="ulink" href="http://www.idpf.org/epub3/latest/packages/">EPUB Packages 3</a></em>. </span>
+					<p>[<abbr class="abbrev">Packages3</abbr>] <span class="title"><em><a class="ulink"
+									href="http://www.idpf.org/epub3/latest/packages/">EPUB Packages 3</a></em>. </span>
 					</p>
 				</div>
 				<div class="biblioentry" id="refXMLDSIGCORE">

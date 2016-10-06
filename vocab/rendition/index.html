@@ -18,7 +18,9 @@
 
             <h1 class="title">EPUB Package Rendering Vocabulary</h1>
 
-            <p class="identity"><span class="pubdate">6 September 2016</span></p>
+            <p class="identity">
+                <span class="pubdate">5 October 2016</span>
+            </p>
 
             <div class="history">
                 <span class="history-title">Document history</span>
@@ -43,11 +45,24 @@
                 </div>
             </div>
         </header>
+        <section id="sotd" class="section">
+            <h2>Status of this Document</h2>
+            <p>This document is subject to change at any time. The terms defined herein will never be removed, but may be
+                deprecated.</p>
+            <p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
+            <p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms
+                are no longer recommended for use.</p>
+            <p>Requests for additions, modifications and clarifications can be made through the <a 
+                href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a 
+                    href="https://github.com/IDPF/epub-vocabs/pulls">Pull requests</a> are also welcome.</p>
+            <p>Refer to the <a href="https://idpf.github.io/epub-guides/reporting-issues/">IDPF Issue Reporting
+                Guidelines</a> for more information about the change request process.</p>
+        </section>
         <nav class="toc" id="toc"><h2 class="toc-title">Table of Contents</h2><ol class="toc">
                 <li><span class="chapter"><a href="#elemdef-opf-meta-overview">1. Overview</a></span><ol>
-                        <li><span class="section"><a href="#sec-purpose-scope">1.1. Purpose and Scope</a></span></li>
-                        <li><span class="section"><a href="#sec-ref">1.2. Referencing</a></span></li>
-                        <li><span class="section"><a href="#sec-terminology">1.3. Terminology</a></span></li>
+                        <li><span class="section"><a href="#sec-purpose-scope">1.1. About this Vocabulary</a></span></li>
+                    <li><span class="section"><a href="#sec-ref">1.2 Referencing</a></span></li>
+                        <li><span class="section"><a href="#sec-terminology">1.3 Terminology</a></span></li>
                     </ol></li>
                 <li><span class="chapter"><a href="#sec-meta-property-values">2. Metadata <code class="markup">meta</code>
                             Properties</a></span>
@@ -62,21 +77,19 @@
             <h1 class="title"><span class="link-marker"><a class="hidden-reveal" href="#elemdef-opf-meta-overview"
                     > </a> </span>1. Overview</h1>
 
-            <section class="section" id="sec-purpose-scope">
-                <h2 class="title"><span class="link-marker"><a class="hidden-reveal" href="#sec-purpose-scope"
-                    > </a> </span>1.1 Purpose and Scope</h2>
+            <section class="section" id="sec-about">
+                <h2 class="title"><span class="link-marker"><a class="hidden-reveal" href="#sec-about"
+                    > </a> </span>1.1 About this Vocabulary</h2>
 
-                <p> This vocabulary, a part of EPUB® 3, defines a set of properties for describing various features of the
-                        <span class="phrase"><a class="ulink"
-                            href="http://www.idpf.org/epub/31/spec/epub-packages.html#sec-package-doc">Package Document</a>
+                <p> This vocabulary defines a set of properties for describing various features of the EPUB® <span
+                        class="phrase"><a class="ulink"
+                            href="http://www.idpf.org/epub3/latest/packages#sec-package-doc">Package Document</a>
                         <a class="biblioref" href="#refPackages3">[Packages3]</a></span>.</p>
-                <p>The properties in this vocabulary are usable in the various Package Document attributes that accept the
+                <p>The properties in this vocabulary are usable in the various Package Document attributes that accept a
                         <span class="phrase"><a class="ulink"
                             href="http://www.idpf.org/epub3/latest/packages#sec-property-datatype">property datatype</a>
                         <a class="biblioref" href="#refPackages3">[Packages3]</a></span>, and are grouped by the element and
-                    attribute that they can be used in.</p>
-                <p>This vocabulary is a companion to the <a class="biblioref" href="#refPackages3">[Packages3]</a>
-                    specification and is intended to be read in conjunction with that document.</p>
+                    attribute that they are allowed in.</p>
             </section>
 
             <section class="section" id="sec-ref">
@@ -101,7 +114,7 @@
                 <p>Terms with meanings specific to EPUB 3 are capitalized in this document (e.g., "Author", "Reading
                     System"). A complete list of these <span class="phrase"><a class="ulink"
                             href="http://www.idpf.org/epub3/latest#sec-terminology">terms and definitions</a></span> is
-                    provided in <a class="biblioref" href="#refEPUB3" title="EPUB 3.1">[EPUB31]</a>.</p>
+                    provided in <a class="biblioref" href="#refEPUB3" title="EPUB 3">[EPUB3]</a>.</p>
                 <p>Only the first instance of a term in a section is linked to its definition.</p>
             </section>
         </section>
@@ -126,7 +139,7 @@
                 <dt id="viewport">viewport</dt>
                 <dd>The <span class="property">viewport</span> property is <span class="phrase"><a class="ulink"
                             href="http://www.idpf.org/epub3/latest#deprecated">deprecated</a></span> in <a class="biblioref"
-                        href="#refEPUB3" title="EPUB 3.1">[EPUB31]</a>. Refer to its definition in <a class="biblioref"
+                        href="#refEPUB31" title="EPUB 3.1">[EPUB31]</a>. Refer to its definition in <a class="biblioref"
                         href="#refPublications301" title="EPUB Publications 3.0.1">[Publications301]</a> for more
                     information.</dd>
             </dl>
@@ -238,6 +251,12 @@
                     <p>[EPUB3] <span class="title"><em>
                                 <a class="ulink" href="http://www.idpf.org/epub3/latest">EPUB 3</a>
                             </em>. </span>
+                    </p>
+                </div>
+                <div class="biblioentry" id="refEPUB31">
+                    <p>[EPUB31] <span class="title"><em>
+                        <a class="ulink" href="http://www.idpf.org/epub/31/spec/epub-spec.html">EPUB 3</a>
+                    </em>. </span>
                     </p>
                 </div>
                 <div class="biblioentry" id="refPackages3">

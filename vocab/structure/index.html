@@ -22,7 +22,7 @@
          <h1 class="title" property="dcterms:title">EPUB 3 Structural Semantics Vocabulary</h1>
          <div class="printhistory">
             <p class="identity">
-               <span class="pubdate">1 August 2016</span>
+               <span class="pubdate">5 October 2016</span>
             </p>
             <div class="history">
                <span class="history-title">Document history</span>
@@ -45,19 +45,20 @@
          <p>All terms in the <a href="#h_indexes">Indexes</a> section, with the exception of the <code>index</code> term, are
             new in the <a href="http://www.idpf.org/epub/idx">EPUB Indexes specification</a>, which is now a Proposed
             Specification.</p>
-         <p>Any use of the terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
+         <p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
          <p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These terms are
             no longer recommended for use.</p>
-         <p>Terms without a label are considered stable.</p>
+         <p>Requests for additions, modifications and clarifications can be made through the <a
+               href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a
+               href="https://github.com/IDPF/epub-vocabs/pulls">Pull requests</a> are also welcome.</p>
+         <p>Refer to the <a href="https://idpf.github.io/epub-guides/reporting-issues/">IDPF Issue Reporting Guidelines</a>
+            for more information about the change request process.</p>
       </section>
       <nav id="sec-toc" class="toc">
          <h2 class="toc-title">Table of Contents</h2>
          <ul class="toc">
             <li class="first">
                <a href="#h_aboutthisvocabulary">About this vocabulary</a>
-            </li>
-            <li class="first">
-               <a href="#h_revisionpolicy">Revision Policy</a>
             </li>
             <li class="first">
                <a href="#h_partitions">Document partitions</a>
@@ -137,21 +138,15 @@
             <p>This vocabulary, a part of EPUB® 3, defines a set of properties relating to the description of structural
                semantics of written works. While the vocabulary is generally host language agnostic, it has been constructed
                primarily to enable semantic inflection of elements in the HTML vocabulary.</p>
-            <p class="output-htu-expl" id="htu-expl">The <i>HTML usage context</i> fields indicate contexts in HTML
-               documents where the given property is considered relevant. Authors may use the properties on HTML markup
-               elements not specifically listed, but must ensure that the semantics they express represent a subset of the
-               carrying element's semantics and do not attach an existing element's meaning to a semantically neutral
-               element.</p>
+            <p class="output-htu-expl" id="htu-expl">The <i>HTML usage context</i> fields indicate contexts in HTML documents
+               where the given property is considered relevant. Authors may use the properties on HTML markup elements not
+               specifically listed, but must ensure that the semantics they express represent a subset of the carrying
+               element's semantics and do not attach an existing element's meaning to a semantically neutral element.</p>
             <p class="output-htu-expl">When processing HTML documents, Reading Systems may ignore such non-compliant
                properties, unless their usage context is explicitly overridden or extended by the host specification.</p>
             <p>The <i>Usage Details</i> sections identify IDPF specifications that define or utilize the specified
                properties.</p>
          </div>
-         <h2 id="h_revisionpolicy">Revision Policy</h2>
-         <p>This document is subject to change at any time. The terms defined in this vocabulary will never be removed, but
-            may be deprecated.</p>
-         <p>Requests for additions, modifications and clarifications must be made through the <a
-               href="https://code.google.com/p/epub-vocabs/issues/list">Issue Tracker</a>.</p>
       </section>
       <section id="vocab" class="vocabulary">
 
@@ -2298,9 +2293,9 @@
                   <p>
                      <span class="subproplabel">HTML usage context: </span>
                      <a href="https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content">phrasing</a> and <a
-                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow</a> content, where the value of the
-                     carrying elements title attribute takes precedence over element content for the purposes of representing
-                     the pagebreak value</p>
+                        href="https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content">flow</a> content, where the
+                     value of the carrying elements title attribute takes precedence over element content for the purposes of
+                     representing the pagebreak value</p>
                </dd>
                <dt id="page-list" about="#page-list" typeof="rdf:Property">page-list</dt>
                <dd about="#page-list" property="rdfs:comment" datatype="xsd:string">
