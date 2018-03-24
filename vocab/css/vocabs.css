@@ -2,6 +2,10 @@
 
 @import url('https://www.idpf.org/epub/css/epub-spec-2016.css');
 
+header {
+	border-bottom: none;
+}
+
 dl#roles dt,
 dl#types dt {
     margin-bottom: 1em;
@@ -10,4 +14,57 @@ dl#types dt {
 div.history {
     margin-top: 2em;
     margin-bottom: 2em
+}
+
+/* w3c logo */
+
+header > a:first-child {
+    border: none;
+    text-decoration: none;
+    background: transparent;
+}
+header > a:first-child {
+    float: right;
+    margin: 0.4rem 0 0.2rem .4rem;
+}
+
+header img[src*="logos/W3C"] {
+    display: block;
+    border: solid #1a5e9a;
+    border-width: .65rem .7rem .6rem;
+    border-radius: .4rem;
+    background: #1a5e9a;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+	font-size: 180%;
+	font-weight: bold;
+}
+
+header > h2 {
+	margin-bottom: 1.5em;
+}
+
+h1+h2 {
+	margin-top: 0;
+}
+
+h1, h2, h3 {
+    color: #005A9C !important;
+    background: transparent !important;
+}
+
+dt, dd {
+	margin-top: 0.5em;
+}
+
+p.copyright {
+	font-size: small;
+}
+
+section#sotd > h2,
+nav.toc> h2 {
+	font-size: 130% !important;
 }
