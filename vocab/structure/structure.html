@@ -3,10 +3,20 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>EPUB 3 Structural Semantics Vocabulary</title>
+		<script>
+			function fixIDs() {
+				var abstract_section = document.getElementById('abstract');
+				var abstract_property = document.getElementById('abstract-1');
+				abstract_section.id = 'abstract-1';
+				abstract_property.id = 'abstract';
+				// currently no way to fix toc reference
+			}
+		</script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove" defer="defer"></script>
 		<script class="remove">
 		  // <![CDATA[
 			var respecConfig = {
+				postProcess: [fixIDs],
 				wg: "EPUB 3 Community Group",
 				wgURI: "https://www.w3.org/community/epub3/",
 				wgPublicList: "public-epub3",
@@ -49,12 +59,13 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<h2>Abstract</h2>
-
 			<p>This vocabulary, a part of EPUB® 3, defines a set of properties relating to the description of structural
 				semantics of written works.</p>
 		</section>
 		<section id="sotd">
+			<p>This document is subject to change at any time. The terms defined herein will never be removed, but may
+				be deprecated.</p>
+
 			<p>This document contains draft terms from the <a href="http://www.idpf.org/epub/profiles/edu/spec/">EDUPUB
 					profile</a>.</p>
 
@@ -62,12 +73,8 @@
 
 			<p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These
 				terms are no longer recommended for use.</p>
-
-			<p>Requests for additions, modifications and clarifications can be made through the <a
-					href="https://github.com/IDPF/epub-vocabs/issues">Issue Tracker</a>. <a
-					href="https://github.com/IDPF/epub-vocabs/pulls">Pull requests</a> are also welcome.</p>
 		</section>
-		<section id="about">
+		<section id="about" class="inoformative">
 			<h2>About this vocabulary</h2>
 
 			<div property="dcterms:description">
@@ -85,6 +92,7 @@
 					properties.</p>
 			</div>
 		</section>
+		<section id="conformance"></section>
 		<section id="partitions" about="#partitions" typeof="rdf:Bag">
 			<h2 about="#partitions" rev="dcterms:title">Document partitions</h2>
 
