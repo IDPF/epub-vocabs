@@ -3,14 +3,14 @@
 /****************************************************/
 
 /* ensure confomity of width for property tables */
-div.informaltable > table {
+table {
 	border-spacing: 0px;
 	border: none;
 	font-size: 1em;
 	width: 100%
 }
 
-div.informaltable > table td, div.informaltable > table th {
+table td, table th {
 	border: none;
 	background-color: rgb(236,246,255);
 	color: rgb(0,0,0);
@@ -18,32 +18,22 @@ div.informaltable > table td, div.informaltable > table th {
 	vertical-align: top;
 }
 
-td.vocab-property > code {
-    color: rgb(0,50,116);
-    font-weight: bold;
-    font-size: 1.1em
-}
-
-div.informaltable > table td.vocab-property-header {
+table th {
     text-align: left;
 	vertical-align: top;
     width: 8em;
     border-right: 1px solid rgb(145,200,255);
 }
 
-div.informaltable > table td.vocab-property-header,
-div.informaltable > table td.vocab-property-border {
+table th {
     border-left: 5px solid rgb(145,200,255);
 }
 
-div.informaltable > table td.multi-para {
-    padding-top: 7px;
-}
-td.vocab-property-desc, td.entry, td.vocab-property {
+td {
     padding: 3px 3px 3px 10px;
 }
 
-td.vocab-cardinality > p {
+td > p:first-child {
 	padding: 0em;
 	margin: 0em
 }

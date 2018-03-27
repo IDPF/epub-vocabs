@@ -40,8 +40,8 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<p>This vocabulary defines properties for describing the accessibility of EPUB Publications in the
-				Package Document metadata.</p>
+			<p>This vocabulary defines properties for describing the accessibility of EPUB Publications in the Package
+				Document metadata.</p>
 		</section>
 		<section id="sotd">
 			<p>This document is subject to change at any time. The terms defined herein will never be removed, but may
@@ -69,9 +69,9 @@
 				<p>The base IRI for referencing this vocabulary is <code class="uri"
 						>http://www.idpf.org/epub/vocab/package/a11y/#</code>.</p>
 
-				<p>The prefix "<code>a11y:</code>" is <a href="http://www.idpf.org/epub/vocab/package/pfx"
-						>reserved for use</a> with properties in this vocabulary and does not have to be declared in the
-					Package Document.</p>
+				<p>The prefix "<code>a11y:</code>" is <a href="http://www.idpf.org/epub/vocab/package/pfx">reserved for
+						use</a> with properties in this vocabulary and does not have to be declared in the Package
+					Document.</p>
 			</section>
 
 			<section id="sec-terminology">
@@ -91,127 +91,119 @@
 			<section id="sec-certifiedBy">
 				<h3>certifiedBy</h3>
 
-				<div class="informaltable" id="certifiedBy">
-					<table>
-						<tbody>
-							<tr>
-								<td class="vocab-property-header">Name:</td>
-								<td class="vocab-property">
-									<code>certifiedBy</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Description:</td>
-								<td class="vocab-property-desc">Identifies a party responsible for the testing and
-									certification of the accessibility of an EPUB Publication.</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Allowed value(s):</td>
-								<td class="entry">
-									<code class="datatype">xsd:string</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Cardinality:</td>
-								<td class="entry">
-									<code class="option">One or more</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Example:</td>
-								<td class="entry">
-									<code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility
-										Testers Group&lt;/meta&gt;</code>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<table id="certifiedBy">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>certifiedBy</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>Identifies a party responsible for the testing and certification of the accessibility of
+								an EPUB Publication.</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code class="datatype">xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>One or more</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code class="prop-example">&lt;meta property="a11y:certifiedBy"&gt;Accessibility Testers
+									Group&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 
 			<section id="sec-certifierCredential">
 				<h3>certifierCredential</h3>
 
-				<div class="informaltable" id="certifierCredential">
-					<table>
-						<tbody>
-							<tr>
-								<td class="vocab-property-header">Name:</td>
-								<td class="vocab-property">
-									<code>certifierCredential</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Description:</td>
-								<td class="vocab-property-desc">Identifies a credential or badge that establishes the
-									authority of the party identified in the <a href="#sec-certifiedBy"><code
-											class="markup">certifiedBy</code> property</a> to certify content
-									accessible.</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Allowed value(s):</td>
-								<td class="entry">
-									<code class="datatype">xsd:string</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Cardinality:</td>
-								<td class="entry">
-									<code class="option">Zero or more</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Example:</td>
-								<td class="entry">
-									<code class="prop-example">&lt;meta property="a11y:certifierCredential"&gt;DAISY
-										OK&lt;/meta&gt;</code>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<table id="certifierCredential">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>certifierCredential</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>Identifies a credential or badge that establishes the authority of the party identified
+								in the <a href="#sec-certifiedBy"><code class="markup">certifiedBy</code> property</a>
+								to certify content accessible.</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code class="datatype">xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>Zero or more</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code class="prop-example">&lt;meta property="a11y:certifierCredential"&gt;DAISY
+									OK&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 
 			<section id="sec-certifierReport">
 				<h3>certifierReport</h3>
 
-				<div class="informaltable" id="certifierReport">
-					<table>
-						<tbody>
-							<tr>
-								<td class="vocab-property-header">Name:</td>
-								<td class="vocab-property">
-									<code>certifierReport</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Description:</td>
-								<td class="vocab-property-desc">Provides a link to an accessibility report created by
-									the party identified in the <a href="#sec-certifiedBy"><code class="markup"
-											>certifiedBy</code> property</a>.</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Allowed value(s):</td>
-								<td class="entry">
-									<code class="datatype">xsd:anyURI</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Cardinality:</td>
-								<td class="entry">
-									<code class="option">Zero or more</code>
-								</td>
-							</tr>
-							<tr>
-								<td class="vocab-property-header">Example:</td>
-								<td class="entry">
-									<code class="prop-example">&lt;link rel="a11y:certifierReport"
-										href="http://example.com/a11y/reports/9780000000001"/&gt;</code>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<table id="certifierReport">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>certifierReport</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>Provides a link to an accessibility report created by the party identified in the <a
+									href="#sec-certifiedBy"><code class="markup">certifiedBy</code> property</a>.</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code class="datatype">xsd:anyURI</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>Zero or more</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code class="prop-example">&lt;link rel="a11y:certifierReport"
+									href="http://example.com/a11y/reports/9780000000001"/&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</section>
 		</section>
 	</body>
