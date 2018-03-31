@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>EPUB Meta Properties Vocabulary</title>
-		<link rel="stylesheet" type="text/css" href="../../../common/css/vocabs.css" />
-		<script src="../../../common/js/biblio.js" class="remove"></script>
+		<title>EPUB Spine Properties Vocabulary</title>
+		<link rel="stylesheet" type="text/css" href="../../common/css/vocabs.css" />
+		<script src="../../common/js/biblio.js" class="remove"></script>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove" defer="defer"></script>
 		<script class="remove">
 		  // <![CDATA[
@@ -13,7 +13,7 @@
 				wgURI: "https://www.w3.org/community/epub3/",
 				wgPublicList: "public-epub3",
 				specStatus: "CG-DRAFT",
-				edDraftURI: "https://idpf.github.io/epub-vocabs/vocab/package/meta/meta.html",
+				edDraftURI: "https://idpf.github.io/epub-vocabs/vocab/package/itemref/itemref.html",
 				// publishDate: "2018-03-26",
 				noRecTrack: true,
 				editors: [
@@ -52,11 +52,13 @@
 				[[Packages]].</p>
 		</section>
 		<section id="sotd">
+			<h2>Status of this Document</h2>
+
 			<p>This document is subject to change at any time. The terms defined herein will never be removed, but may
 				be deprecated.</p>
-			
+
 			<p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
-			
+
 			<p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These
 				terms are no longer recommended for use.</p>
 		</section>
@@ -69,16 +71,13 @@
 				<p>The properties in this vocabulary are usable in the various Package Document attributes that accept
 					the <a href="http://www.idpf.org/epub3/latest/packages#sec-property-datatype">property datatype</a>
 					[[Packages]], and are grouped by the element and attribute that they can be used in.</p>
-
-				<p>This vocabulary is a companion to the [[Packages]] specification and is intended to be read in
-					conjunction with that document.</p>
 			</section>
 
 			<section id="sec-ref">
 				<h3>Referencing</h3>
 
-				<p>Properties without a prefix are referenceable using the base IRI
-						<code>http://idpf.org/epub/vocab/package/#</code>.</p>
+				<p>Properties are referenceable using the base IRI
+					<code>http://idpf.org/epub/vocab/package/#</code>.</p>
 			</section>
 
 			<section id="sec-terminology">
@@ -91,10 +90,71 @@
 			</section>
 			<section id="conformance"></section>
 		</section>
-		<section id="sec-meta-property-values">
-			<h2>Metadata <code>meta</code> Properties</h2>
+		<section id="sec-itemref-property-values">
+			<h2>Spine <code>itemref</code> Properties</h2>
 
-			<p>No properties are currently defined.</p>
+			<p>The following tables define properties for use in the <a
+					href="http://www.idpf.org/epub3/latest/packages#sec-itemref-elem"><code>itemref</code> element</a>
+				<a href="http://www.idpf.org/epub3/latest/packages#attrdef-itemref-properties"><code>properties</code>
+					attribute</a> [[!Packages]].</p>
+
+			<section id="sec-page-spread-left">
+				<h3>page-spread-left</h3>
+
+				<table id="page-spread-left">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>page-spread-left</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>The <code>page-spread-left</code> property indicates that the first page of the
+								associated <code>item</code> element's <a
+									href="http://www.idpf.org/epub3/latest#gloss-content-document-epub">EPUB Content
+									Document</a> represents the left-hand side of a two-page spread.</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="sec-page-spread-right">
+				<h3>page-spread-right</h3>
+
+				<table id="page-spread-right">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>page-spread-right</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>The <code>page-spread-right</code> property indicates that the first page of the
+								associated <code>item</code> element's <a
+									href="http://www.idpf.org/epub3/latest#gloss-content-document-epub">EPUB Content
+									Document</a> represents the right-hand side of a two-page spread.</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="examples-itemref-properties">
+				<h3>Examples</h3>
+
+				<figure class="example" id="example-itemref-multicol">
+					<figcaption>The following example shows how a two-page spread of a map might be indicated in the
+							<code>spine</code>.</figcaption>
+					<pre class="synopsis">&lt;spine&gt;&#xD;
+	&lt;itemref idref="title"/&gt;&#xD;
+	&lt;itemref idref="ps-1-l" properties="page-spread-left"/&gt;&#xD;
+	&lt;itemref idref="ps-1-r" properties="page-spread-right"/&gt;&#xD;
+	&lt;itemref idref="toc"/&gt;&#xD;
+	…&#xD;
+&lt;/spine&gt;</pre>
+				</figure>
+			</section>
 		</section>
 	</body>
 </html>

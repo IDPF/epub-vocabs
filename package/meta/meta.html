@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>EPUB Meta Properties Vocabulary</title>
+		<link rel="stylesheet" type="text/css" href="../../common/css/vocabs.css" />
+		<script src="../../common/js/biblio.js" class="remove"></script>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove" defer="defer"></script>
+		<script class="remove">
+		  // <![CDATA[
+			var respecConfig = {
+				wg: "EPUB 3 Community Group",
+				wgURI: "https://www.w3.org/community/epub3/",
+				wgPublicList: "public-epub3",
+				specStatus: "CG-DRAFT",
+				edDraftURI: "https://idpf.github.io/epub-vocabs/vocab/package/meta/meta.html",
+				// publishDate: "2018-03-26",
+				noRecTrack: true,
+				editors: [
+					{
+						name: "Matt Garrish",
+						company: "DAISY Consortium",
+						companyURL: "http://www.daisy.org",
+						w3cid: 51655
+					}
+				],
+				formerEditors: [
+					{
+						name: "Markus Gylling",
+						company: "International Digital Publishing Forum (IDPF)",
+						companyURL: "http://idpf.org"
+					}
+				],
+				processVersion: 2018,
+				includePermalinks: true,
+				permalinkEdge:     true,
+				permalinkHide:     false,
+				diffTool:          "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+				github: {
+					repoURL: "https://github.com/idpf/epub-vocabs",
+					branch: "master"
+				},
+				localBiblio: biblio
+			};
+          // ]]>
+      </script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>This vocabulary defines a set of properties for describing various features of the <a
+					href="http://www.idpf.org/epub3/latest/packages#sec-package-doc">Package Document</a>
+				[[Packages]].</p>
+		</section>
+		<section id="sotd">
+			<p>This document is subject to change at any time. The terms defined herein will never be removed, but may
+				be deprecated.</p>
+
+			<p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
+
+			<p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These
+				terms are no longer recommended for use.</p>
+		</section>
+		<section id="elemdef-opf-meta-overview">
+			<h2>Overview</h2>
+
+			<section id="sec-about" class="informative">
+				<h3>About this Vocabulary</h3>
+
+				<p>The properties in this vocabulary are usable in the various Package Document attributes that accept
+					the <a href="http://www.idpf.org/epub3/latest/packages#sec-property-datatype">property datatype</a>
+					[[Packages]], and are grouped by the element and attribute that they can be used in.</p>
+
+				<p>This vocabulary is a companion to the [[Packages]] specification and is intended to be read in
+					conjunction with that document.</p>
+			</section>
+
+			<section id="sec-ref">
+				<h3>Referencing</h3>
+
+				<p>Properties without a prefix are referenceable using the base IRI
+						<code>http://idpf.org/epub/vocab/package/#</code>.</p>
+			</section>
+
+			<section id="sec-terminology">
+				<h3>Terminology</h3>
+
+				<p>Terms with meanings specific to EPUB 3 are capitalized in this document (e.g., "Author", "Reading
+					System"). A complete list of these <a href="http://www.idpf.org/epub3/latest#sec-terminology">terms
+						and definitions</a> is provided in [[!EPUB3]].</p>
+
+				<p>Only the first instance of a term in a section is linked to its definition.</p>
+			</section>
+			<section id="conformance"></section>
+		</section>
+		<section id="sec-meta-property-values">
+			<h2>Metadata <code>meta</code> Properties</h2>
+
+			<p>These properties MUST reference the expression or resource they augment in the <code><a
+						href="#attrdef-meta-refines">refines</a></code> attribute on their parent <code><a
+						href="#elemdef-meta">meta</a></code> element.</p>
+
+			<p>The following tables detail the available properties.</p>
+
+			<section id="sec-alternate-script">
+				<h3>alternate-script</h3>
+
+				<table id="alternate-script">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>alternate-script</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>alternate-script</code> property provides an alternate expression of the
+									associated property value in a language and script identified by the
+										<code>xml:lang</code> attribute.</p>
+								<p>This property is typically attached to <code>creator</code> and <code>title</code>
+									properties for internationalization purposes.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or more</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>All properties.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#creator" property="alternate-script" xml:lang="ja"&gt;村上
+									春樹&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-belongs-to-collection">
+				<h3>belongs-to-collection</h3>
+
+				<table id="belongs-to-collection">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>belongs-to-collection</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>belongs-to-collection</code> property identifies the name of a collection
+									to which the EPUB Publication belongs. An EPUB Publication MAY belong to one or more
+									collections.</p>
+								<p>It is also possible chain these properties using the <a href="#attrdef-meta-refines"
+											><code>refines</code> attribute</a> to indicate that one collection is
+									itself a member of another collection.</p>
+								<p>To allow Reading System to organize collections and avoid naming collisions (e.g.,
+									unrelated collections might share a similar name, or different editions of a
+									collection could be released), an identifier SHOULD be provided that uniquely
+									identifies the instance of the collection. The <code>dcterms:identifier</code>
+									property must carry this identifier.</p>
+								<p>The collection MAY more precisely define its nature by attaching a <a
+										href="#collection-type"><code>collection-type</code></a> property.</p>
+								<p>The position of the EPUB Publication within the collection MAY be provided by
+									attaching a <a href="#group-position"><code>group-position</code> property</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or more</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>Applies to the EPUB Publication, and can refine other instances of itself.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<pre class="synopsis">&lt;meta property="belongs-to-collection" id="c01"&gt;
+   The New French Cuisine Masters
+&lt;/meta&gt;
+&lt;meta refines="#c01" property="collection-type"&gt;series&lt;/meta&gt;
+&lt;meta refines="#c01" property="dcterms:identifier"&gt;
+   urn:uuid:11111111-2222-3333-4444-555555555555
+&lt;/meta&gt;
+
+&lt;meta property="belongs-to-collection" id="c02"&gt;Harry Potter&lt;/meta&gt;
+&lt;meta refines="#c02" property="collection-type"&gt;set&lt;/meta&gt;
+&lt;meta refines="#c02" property="group-position"&gt;2&lt;/meta&gt;
+&lt;meta refines="#c02" property="dcterms:identifier"&gt;
+   urn:uuid:99999999-8888-7777-6666-555555555555
+&lt;/meta&gt;</pre>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-collection-type">
+				<h3>collection-type</h3>
+
+				<table id="collection-type">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>collection-type</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>collection-type</code> property indicates the form or nature of a
+									collection.</p>
+								<p>When the <code>collection-type</code> value is drawn from a code list or other formal
+									enumeration, the <a href="#attrdef-meta-scheme"><code>scheme</code> attribute</a>
+									SHOULD be attached to identify its source.</p>
+								<p>When a scheme is not specified, Reading Systems SHOULD recognize the following
+									collection type values:</p>
+								<dl>
+									<dt>
+										<code>series</code>
+									</dt>
+									<dd>
+										<p>A sequence of related works that are formally identified as a group;
+											typically open-ended with works issued individually over time.</p>
+									</dd>
+									<dt>
+										<code>set</code>
+									</dt>
+									<dd>
+										<p>A finite collection of works that together constitute a single intellectual
+											unit; typically issued together and able to be sold as a unit.</p>
+									</dd>
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<td>Allowed value(s):</td>
+							<th>
+								<code>xsd:string</code>
+							</th>
+						</tr>
+						<tr>
+							<td>Cardinality:</td>
+							<th>
+								<code>zero or one</code>
+							</th>
+						</tr>
+						<tr>
+							<td>Extends:</td>
+							<th>
+								<a href="#belongs-to-collection"><code>belongs-to-collection</code></a>
+							</th>
+						</tr>
+						<tr>
+							<td>Example:</td>
+							<th>
+								<pre class="synopsis">&lt;meta property="belongs-to-collection" id="c02"&gt;Harry Potter&lt;/meta&gt;
+&lt;meta refines="#c02" property="collection-type"&gt;set&lt;/meta&gt;</pre>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-display-seq">
+				<h3>display-seq</h3>
+
+				<table id="display-seq">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>display-seq</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>display-seq</code> property indicates the numeric position in which to
+									display the current property relative to identical metadata properties (e.g., to
+									indicate the order in which to render multiple <code>title</code>s).</p>
+								<p>When the <code>display-seq</code> property is attached to some, but not all, of the
+									members in a set, only the elements identified as having a sequence SHOULD be
+									included in any rendering.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:unsignedInt</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>All properties.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#t2" property="display-seq"&gt;1&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-file-as">
+				<h3>file-as</h3>
+
+				<table id="file-as">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>file-as</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>The <code>file-as</code> property provides the normalized form of the associated
+								property for sorting.</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>All properties.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#creator" property="file-as"&gt;Murakami,
+									Haruki&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-group-position">
+				<h3>group-position</h3>
+
+				<table id="group-position">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>group-position</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>group-position</code> property indicates the numeric position in which the
+									EPUB Publication is ordered relative to other works belonging to the same group
+									(whether all EPUB Publications or not).</p>
+								<p>The <code>group-position</code> property can be attached to any metadata property
+									that establishes the group, but is typically associated with the <a
+										href="#belongs-to-collection"><code>belongs-to-collection</code>
+									property</a>.</p>
+								<p>An EPUB Publication can belong to more than one group.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td> A single <code>xsd:unsignedInt</code> or series of decimal-separated numbers (e.g.,
+									<code>1</code> or <code>2.2.1</code>). </td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>All properties.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#c02" property="group-position"&gt;2&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-identifier-type">
+				<h3>identifier-type</h3>
+
+				<table id="identifier-type">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>identifier-type</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>identifier-type</code> property indicates the form or nature of an
+										<code>identifier</code>.</p>
+								<p>When the <code>identifier-type</code> value is drawn from a code list or other formal
+									enumeration, the <a href="#attrdef-meta-scheme"><code>scheme</code> attribute</a>
+									SHOULD be attached to identify its source.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>
+								<code>identifier</code>, <code>source</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code> &lt;meta refines="#src-id" property="identifier-type"
+									scheme="onix:codelist5"&gt;15&lt;/meta&gt; </code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-meta-auth">
+				<h3>meta-auth</h3>
+
+				<table id="meta-auth">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>meta-auth</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>The <code>meta-auth</code> property identifies the party or authority responsible for an
+								instance of package metadata.</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>All properties.</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="isbn-id" property="meta-auth"
+									id="meta-authority-01"&gt;http://isbn-international.org/&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-role">
+				<h3>role</h3>
+
+				<table id="role">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>role</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>role</code> property describes the nature of work performed by a
+										<code>creator</code> or <code>contributor</code> (e.g., that the person is the
+									author or editor of a work).</p>
+								<p>When the <code>role</code> value is drawn from a code list or other formal
+									enumeration, the <a href="#attrdef-meta-scheme"><code>scheme</code> attribute</a>
+									SHOULD be attached to identify its source.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>
+								<code>contributor</code>, <code>creator</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code> &lt;meta refines="#creator" property="role"
+									scheme="marc:relators"&gt;aut&lt;/meta&gt; </code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-source-of">
+				<h3>source-of</h3>
+
+				<table id="source-of">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>source-of</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>source-of</code> property indicates a unique aspect of an adapted source
+									resource that has been retained in the given Rendition of the EPUB Publication. </p>
+								<p>This specification defines the <code>pagination</code> value to indicate that the
+									referenced <code>dc:source</code> element is the source of the <a
+										href="http://www.idpf.org/epub/vocab/structure/#pagebreak"
+											><code>pagebreak</code> properties</a> defined in the content. This value
+									SHOULD be set whenever pagination is included and the print source is known.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>pagination</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>
+								<code>dc:source</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code> &lt;meta refines="#isbn" property="source-of"&gt;pagination&lt;/meta&gt; </code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-title-type">
+				<h3>title-type</h3>
+
+				<table id="title-type">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>title-type</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>title-type</code> property indicates the form or nature of a
+										<code>title</code>.</p>
+								<p>When the <code>title-type</code> value is drawn from a code list or other formal
+									enumeration, the <a href="#attrdef-meta-scheme"><code>scheme</code> attribute</a>
+									SHOULD be attached to identify its source. When a scheme is not specified, Reading
+									Systems <span class="rfc2119">should</span> recognize the following title type
+									values: <code>main</code>, <code>subtitle</code>, <code class="value">short</code>,
+										<code>collection</code>, <code class="value">edition</code> and
+										<code>expanded</code>. </p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td>
+								<code>title</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code> &lt;meta refines="#title" property="title-type"&gt;main&lt;/meta&gt; </code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+	</body>
+</html>
