@@ -322,6 +322,12 @@ var biblio = {
       "title": "Unicode Normalization Forms",
       "href": "http://www.unicode.org/reports/tr15/"
     },
+    "TrueType": {
+      "title": "Apple TrueType Reference Manual",
+      "href": "https://developer.apple.com/fonts/TrueType-Reference-Manual/",
+      "publisher": "Apple",
+      "date": "2002"
+    },
     "TypesRegistry": {
       "title": "EPUB Publication Types Registry",
       "href": "http://www.idpf.org/epub/vocab/package/types"
