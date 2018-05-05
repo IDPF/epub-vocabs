@@ -154,6 +154,59 @@
 				</table>
 			</section>
 
+			<section id="sec-authority">
+				<h3>authority</h3>
+
+				<table id="authority">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>authority</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>authority</code> property identifies the system or scheme the referenced
+									element's value is drawn from.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<ul>
+									<li>
+										<p>a <a href="http://idpf.org/epub/registries/authorities/">reserved authority
+												value</a> [[!AuthorityRegistry]] (case-insensitive); or</p>
+									</li>
+									<li>
+										<p>an absolute IRI [[!RFC3987]] that identifies the scheme. The IRI SHOULD refer
+											to a resource that provides more information about the scheme.</p>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td><code>subject</code></td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#subject01" property="authority"&gt;BISAC&lt;/meta&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
 			<section id="sec-belongs-to-collection">
 				<h3>belongs-to-collection</h3>
 
@@ -621,6 +674,49 @@
 							<th>Example:</th>
 							<td>
 								<code> &lt;meta refines="#isbn" property="source-of"&gt;pagination&lt;/meta&gt; </code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="sec-term">
+				<h3>term</h3>
+
+				<table id="term">
+					<tbody>
+						<tr>
+							<th>Name:</th>
+							<td>
+								<code>term</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Description:</th>
+							<td>
+								<p>The <code>term</code> property provides a subject code.</p>
+							</td>
+						</tr>
+						<tr>
+							<th>Allowed value(s):</th>
+							<td>
+								<code>xsd:string</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Cardinality:</th>
+							<td>
+								<code>zero or one</code>
+							</td>
+						</tr>
+						<tr>
+							<th>Extends:</th>
+							<td><code>subject</code></td>
+						</tr>
+						<tr>
+							<th>Example:</th>
+							<td>
+								<code>&lt;meta refines="#subject01" property="term"&gt;FIC024000&lt;/meta&gt;</code>
 							</td>
 						</tr>
 					</tbody>
