@@ -143,15 +143,17 @@
 							<th>Extends:</th>
 							<td>All properties.</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#creator" property="alternate-script" xml:lang="ja"&gt;村上
-									春樹&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows the author name in English and alternatively in Japanese.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:creator id="creator">Haruki Murakami&lt;/dc:creator>
+    &lt;meta refines="#creator" property="alternate-script" xml:lang="ja">村上 春樹&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-authority">
@@ -197,14 +199,17 @@
 							<th>Extends:</th>
 							<td><code>subject</code></td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#subject01" property="authority"&gt;BISAC&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows a BISAC subject heading.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:subject id="subject01"&gt;FICTION / Occult &amp;amp; Supernatural&lt;/dc:subject&gt;
+    &lt;meta refines="#subject01" property="authority">BISAC&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-belongs-to-collection">
@@ -254,27 +259,17 @@
 							<th>Extends:</th>
 							<td>Applies to the EPUB Publication, and can refine other instances of itself.</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<pre class="synopsis">&lt;meta property="belongs-to-collection" id="c01"&gt;
-   The New French Cuisine Masters
-&lt;/meta&gt;
-&lt;meta refines="#c01" property="collection-type"&gt;series&lt;/meta&gt;
-&lt;meta refines="#c01" property="dcterms:identifier"&gt;
-   urn:uuid:11111111-2222-3333-4444-555555555555
-&lt;/meta&gt;
-
-&lt;meta property="belongs-to-collection" id="c02"&gt;Harry Potter&lt;/meta&gt;
-&lt;meta refines="#c02" property="collection-type"&gt;set&lt;/meta&gt;
-&lt;meta refines="#c02" property="group-position"&gt;2&lt;/meta&gt;
-&lt;meta refines="#c02" property="dcterms:identifier"&gt;
-   urn:uuid:99999999-8888-7777-6666-555555555555
-&lt;/meta&gt;</pre>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows that the publication belongs to the Harry Potter set of books.</p>
+					<pre>&lt;metadata&gt;
+    …
+    &lt;meta property="belongs-to-collection" id="c02"&gt;Harry Potter&lt;/meta&gt;
+    &lt;meta refines="#c02" property="collection-type"&gt;set&lt;/meta&gt;
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-collection-type">
@@ -334,15 +329,19 @@
 								<a href="#belongs-to-collection"><code>belongs-to-collection</code></a>
 							</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<pre class="synopsis">&lt;meta property="belongs-to-collection" id="c02"&gt;Harry Potter&lt;/meta&gt;
-&lt;meta refines="#c02" property="collection-type"&gt;set&lt;/meta&gt;</pre>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following examples shows that a publication belongs to the series The New French Cuisine Masters.</p>
+					<pre>&lt;metadata>
+    …
+    &lt;meta property="belongs-to-collection" id="c01"&gt;
+        The New French Cuisine Masters
+    &lt;/meta&gt;
+    &lt;meta refines="#c01" property="collection-type"&gt;series&lt;/meta&gt;
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-display-seq">
@@ -383,14 +382,27 @@
 							<th>Extends:</th>
 							<td>All properties.</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#t2" property="display-seq"&gt;1&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				
+				<aside class="example">
+					<p>The following example shows how to indicate display sequence for titles.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:title id="t1">The Red and the Black&lt;/dc:title>
+    &lt;meta refines="#t1" property="title-type">main&lt;/meta>
+    &lt;meta refines="#t1" property="display-seq">1&lt;/meta>
+    
+    &lt;dc:title id="t2">A Chronicle of the Nineteenth Century&lt;/dc:title>
+    &lt;meta refines="#t2" property="title-type">subtitle&lt;/meta>
+    &lt;meta refines="#t2" property="display-seq">2&lt;/meta>
+    
+    &lt;dc:title id="t3">A Chronicle of 1830&lt;/dc:title>
+    &lt;meta refines="#t3" property="title-type">subtitle&lt;/meta>
+    &lt;meta refines="#t3" property="display-seq">3&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-file-as">
@@ -425,15 +437,17 @@
 							<th>Extends:</th>
 							<td>All properties.</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#creator" property="file-as"&gt;Murakami,
-									Haruki&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p></p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:creator id="creator01">Lewis Carroll&lt;/dc:creator>
+    &lt;meta refines="#creator01" property="file-as">Carroll, Lewis&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-group-position">
@@ -475,14 +489,20 @@
 							<th>Extends:</th>
 							<td>All properties.</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#c02" property="group-position"&gt;2&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following examples shows that a publication is second in the Lord of the Rings set of books.</p>
+					<pre>&lt;metadata>
+    …
+    &lt;meta property="belongs-to-collection" id="c01"&gt;
+        The Lord of the Rings
+    &lt;/meta&gt;
+    &lt;meta refines="#c01" property="collection-type"&gt;set&lt;/meta&gt;
+    &lt;meta refines="#c01" property="group-position"&gt;2&lt;/meta&gt;
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-identifier-type">
@@ -524,19 +544,21 @@
 								<code>identifier</code>, <code>source</code>
 							</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code> &lt;meta refines="#src-id" property="identifier-type"
-									scheme="onix:codelist5"&gt;15&lt;/meta&gt; </code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows how to indicate that an identifier is an ISBN using the ONIX code list 5 numeric value.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:identifier id="isbn-id">urn:isbn:9780101010101&lt;/dc:identifier>
+    &lt;meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-meta-auth">
-				<h3>meta-auth</h3>
+				<h3>meta-auth (Deprecated)</h3>
 
 				<table id="meta-auth">
 					<tbody>
@@ -548,8 +570,11 @@
 						</tr>
 						<tr>
 							<th>Description:</th>
-							<td>The <code>meta-auth</code> property identifies the party or authority responsible for an
-								instance of package metadata.</td>
+							<td>
+								<p>The <code>meta-auth</code> property identifies the party or authority responsible for an
+									instance of package metadata.</p>
+								<p><strong>Use of the <code>meta-auth</code> property is deprecated.</strong></p>
+							</td>
 						</tr>
 						<tr>
 							<th>Allowed value(s):</th>
@@ -566,13 +591,6 @@
 						<tr>
 							<th>Extends:</th>
 							<td>All properties.</td>
-						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="isbn-id" property="meta-auth"
-									id="meta-authority-01"&gt;http://isbn-international.org/&lt;/meta&gt;</code>
-							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -618,15 +636,20 @@
 								<code>contributor</code>, <code>creator</code>
 							</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code> &lt;meta refines="#creator" property="role"
-									scheme="marc:relators"&gt;aut&lt;/meta&gt; </code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example uses the MARC Relators vocabulary to differentiate the author from the illustrator of a work.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:creator id="creator01">Lewis Carroll&lt;/dc:creator>
+    &lt;meta refines="#creator01" property="role" scheme="marc:relators">aut&lt;/meta>
+    
+    &lt;dc:creator id="creator02">John Tenniel&lt;/dc:creator>
+    &lt;meta refines="#creator02" property="role" scheme="marc:relators">ill&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-source-of">
@@ -670,14 +693,21 @@
 								<code>dc:source</code>
 							</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code> &lt;meta refines="#isbn" property="source-of"&gt;pagination&lt;/meta&gt; </code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows the ISBN identifier for an EPUB Publication together with the source ISBN identifier for the print work it was derived from.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:identifier id="isbn-id">urn:isbn:9780101010101&lt;/dc:identifier>
+    &lt;meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15&lt;/meta>
+    
+    &lt;dc:source id="src-id">urn:isbn:9780375704024&lt;/dc:source>
+    &lt;meta refines="#src-id" property="identifier-type" scheme="onix:codelist5">15&lt;/meta>
+    &lt;meta refines="#src-id" property="source-of">pagination&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-term">
@@ -713,14 +743,18 @@
 							<th>Extends:</th>
 							<td><code>subject</code></td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code>&lt;meta refines="#subject01" property="term"&gt;FIC024000&lt;/meta&gt;</code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows a BISAC code for a subject heading.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:subject id="subject01"&gt;FICTION / Occult &amp;amp; Supernatural&lt;/dc:subject&gt;
+    &lt;meta refines="#subject01" property="authority">BISAC&lt;/meta>
+    &lt;meta refines="#subject01" property="term">FIC024000&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
 
 			<section id="sec-title-type">
@@ -766,15 +800,83 @@
 								<code>title</code>
 							</td>
 						</tr>
-						<tr>
-							<th>Example:</th>
-							<td>
-								<code> &lt;meta refines="#title" property="title-type"&gt;main&lt;/meta&gt; </code>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<aside class="example">
+					<p>The following example shows how to identify different title types.</p>
+					
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    …
+    &lt;dc:title id="t1">A Dictionary of Modern English Usage&lt;/dc:title>
+    &lt;meta refines="#t1" property="title-type">main&lt;/meta>
+    
+    &lt;dc:title id="t2">First Edition&lt;/dc:title>
+    &lt;meta refines="#t2" property="title-type">edition&lt;/meta>
+    
+    &lt;dc:title id="t3">Fowler's&lt;/dc:title>
+    &lt;meta refines="#t3" property="title-type">short&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
+				<aside class="example">
+					<p>The following example shows how the complex title "The Great Cookbooks of the World: Mon premier guide de cuisson, un Mémoire. The New French Cuisine Masters, Volume Two. Special Anniversary Edition" could be classified.</p>
+					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    &lt;dc:title id="t1" xml:lang="fr">Mon premier guide de cuisson, un Mémoire&lt;/dc:title>
+    &lt;meta refines="#t1" property="title-type">main&lt;/meta>
+    &lt;meta refines="#t1" property="display-seq">2&lt;/meta>
+    
+    &lt;dc:title id="t2">The Great Cookbooks of the World&lt;/dc:title>
+    &lt;meta refines="#t2" property="title-type">collection&lt;/meta>
+    &lt;meta refines="#t2" property="display-seq">1&lt;/meta>
+    
+    &lt;dc:title id="t3">The New French Cuisine Masters&lt;/dc:title>
+    &lt;meta refines="#t3" property="title-type">collection&lt;/meta>
+    &lt;meta refines="#t3" property="display-seq">3&lt;/meta>
+    
+    &lt;dc:title id="t4">Special Anniversary Edition&lt;/dc:title>
+    &lt;meta refines="#t4" property="title-type">edition&lt;/meta>
+    &lt;meta refines="#t4" property="display-seq">4&lt;/meta>
+    
+    &lt;dc:title id="t5">The Great Cookbooks of the World: 
+        Mon premier guide de cuisson, un Mémoire. 
+        The New French Cuisine Masters, Volume Two. 
+        Special Anniversary Edition&lt;/dc:title>
+    &lt;meta refines="#t5" property="title-type">expanded&lt;/meta>
+    …
+&lt;/metadata></pre>
+				</aside>
 			</section>
+		</section>
+		<section id="examples">
+			<h2>Examples</h2>
+			
+			<aside class="example">
+				<p>The following example represents a typical set of refined metadata a Rendition might contain.</p>
+				<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    
+    &lt;dc:identifier id="pub-id">urn:uuid:A1B0D67E-2E81-4DF5-9E67-A64CBE366809&lt;/dc:identifier>
+    &lt;meta refines="#pub-id" property="identifier-type" scheme="xsd:string">uuid&lt;/meta>
+    
+    &lt;dc:identifier id="isbn-id">urn:isbn:9780101010101&lt;/dc:identifier>
+    &lt;meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15&lt;/meta>
+    
+    &lt;dc:source id="src-id">urn:isbn:9780375704024&lt;/dc:source>
+    &lt;meta refines="#src-id" property="identifier-type" scheme="onix:codelist5">15&lt;/meta>
+    
+    &lt;dc:title id="title">Norwegian Wood&lt;/dc:title>
+    &lt;meta refines="#title" property="title-type">main&lt;/meta>
+    
+    &lt;dc:language>en&lt;/dc:language>
+    
+    &lt;dc:creator id="creator">Haruki Murakami&lt;/dc:creator>
+    &lt;meta refines="#creator" property="role" scheme="marc:relators" id="role">aut&lt;/meta>
+    &lt;meta refines="#creator" property="alternate-script" xml:lang="ja">村上 春樹&lt;/meta>
+    &lt;meta refines="#creator" property="file-as">Murakami, Haruki&lt;/meta>
+    
+    &lt;meta property="dcterms:modified">2011-01-01T12:00:00Z&lt;/meta>
+    
+&lt;/metadata></pre>
+			</aside>
 		</section>
 	</body>
 </html>
