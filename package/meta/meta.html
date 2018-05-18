@@ -332,7 +332,8 @@
 					</tbody>
 				</table>
 				<aside class="example">
-					<p>The following examples shows that a publication belongs to the series The New French Cuisine Masters.</p>
+					<p>The following examples shows that a publication belongs to the series The New French Cuisine
+						Masters.</p>
 					<pre>&lt;metadata>
     …
     &lt;meta property="belongs-to-collection" id="c01"&gt;
@@ -345,7 +346,7 @@
 			</section>
 
 			<section id="sec-display-seq">
-				<h3>display-seq</h3>
+				<h3>display-seq (Deprecated)</h3>
 
 				<table id="display-seq">
 					<tbody>
@@ -361,9 +362,10 @@
 								<p>The <code>display-seq</code> property indicates the numeric position in which to
 									display the current property relative to identical metadata properties (e.g., to
 									indicate the order in which to render multiple <code>title</code>s).</p>
-								<p>When the <code>display-seq</code> property is attached to some, but not all, of the
-									members in a set, only the elements identified as having a sequence SHOULD be
-									included in any rendering.</p>
+								<p><strong>Use of the <code>display-seq</code> property is deprecated.</strong>
+									Precedence is given to elements in a set based on their appearance in document order
+									in the EPUB Package Document (i.e., the first element in document order has the
+									highest priority).</p>
 							</td>
 						</tr>
 						<tr>
@@ -384,25 +386,6 @@
 						</tr>
 					</tbody>
 				</table>
-				
-				<aside class="example">
-					<p>The following example shows how to indicate display sequence for titles.</p>
-					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    …
-    &lt;dc:title id="t1">The Red and the Black&lt;/dc:title>
-    &lt;meta refines="#t1" property="title-type">main&lt;/meta>
-    &lt;meta refines="#t1" property="display-seq">1&lt;/meta>
-    
-    &lt;dc:title id="t2">A Chronicle of the Nineteenth Century&lt;/dc:title>
-    &lt;meta refines="#t2" property="title-type">subtitle&lt;/meta>
-    &lt;meta refines="#t2" property="display-seq">2&lt;/meta>
-    
-    &lt;dc:title id="t3">A Chronicle of 1830&lt;/dc:title>
-    &lt;meta refines="#t3" property="title-type">subtitle&lt;/meta>
-    &lt;meta refines="#t3" property="display-seq">3&lt;/meta>
-    …
-&lt;/metadata></pre>
-				</aside>
 			</section>
 
 			<section id="sec-file-as">
@@ -492,7 +475,8 @@
 					</tbody>
 				</table>
 				<aside class="example">
-					<p>The following examples shows that a publication is second in the Lord of the Rings set of books.</p>
+					<p>The following examples shows that a publication is second in the Lord of the Rings set of
+						books.</p>
 					<pre>&lt;metadata>
     …
     &lt;meta property="belongs-to-collection" id="c01"&gt;
@@ -547,7 +531,8 @@
 					</tbody>
 				</table>
 				<aside class="example">
-					<p>The following example shows how to indicate that an identifier is an ISBN using the ONIX code list 5 numeric value.</p>
+					<p>The following example shows how to indicate that an identifier is an ISBN using the ONIX code
+						list 5 numeric value.</p>
 					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     …
     &lt;dc:identifier id="isbn-id">urn:isbn:9780101010101&lt;/dc:identifier>
@@ -571,8 +556,8 @@
 						<tr>
 							<th>Description:</th>
 							<td>
-								<p>The <code>meta-auth</code> property identifies the party or authority responsible for an
-									instance of package metadata.</p>
+								<p>The <code>meta-auth</code> property identifies the party or authority responsible for
+									an instance of package metadata.</p>
 								<p><strong>Use of the <code>meta-auth</code> property is deprecated.</strong></p>
 							</td>
 						</tr>
@@ -639,7 +624,8 @@
 					</tbody>
 				</table>
 				<aside class="example">
-					<p>The following example uses the MARC Relators vocabulary to differentiate the author from the illustrator of a work.</p>
+					<p>The following example uses the MARC Relators vocabulary to differentiate the author from the
+						illustrator of a work.</p>
 					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     …
     &lt;dc:creator id="creator01">Lewis Carroll&lt;/dc:creator>
@@ -696,7 +682,8 @@
 					</tbody>
 				</table>
 				<aside class="example">
-					<p>The following example shows the ISBN identifier for an EPUB Publication together with the source ISBN identifier for the print work it was derived from.</p>
+					<p>The following example shows the ISBN identifier for an EPUB Publication together with the source
+						ISBN identifier for the print work it was derived from.</p>
 					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     …
     &lt;dc:identifier id="isbn-id">urn:isbn:9780101010101&lt;/dc:identifier>
@@ -804,7 +791,7 @@
 				</table>
 				<aside class="example">
 					<p>The following example shows how to identify different title types.</p>
-					
+
 					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     …
     &lt;dc:title id="t1">A Dictionary of Modern English Usage&lt;/dc:title>
@@ -819,7 +806,9 @@
 &lt;/metadata></pre>
 				</aside>
 				<aside class="example">
-					<p>The following example shows how the complex title "The Great Cookbooks of the World: Mon premier guide de cuisson, un Mémoire. The New French Cuisine Masters, Volume Two. Special Anniversary Edition" could be classified.</p>
+					<p>The following example shows how the complex title "The Great Cookbooks of the World: Mon premier
+						guide de cuisson, un Mémoire. The New French Cuisine Masters, Volume Two. Special Anniversary
+						Edition" could be classified.</p>
 					<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     &lt;dc:title id="t1" xml:lang="fr">Mon premier guide de cuisson, un Mémoire&lt;/dc:title>
     &lt;meta refines="#t1" property="title-type">main&lt;/meta>
@@ -849,7 +838,7 @@
 		</section>
 		<section id="examples">
 			<h2>Examples</h2>
-			
+
 			<aside class="example">
 				<p>The following example represents a typical set of refined metadata a Rendition might contain.</p>
 				<pre>&lt;metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
