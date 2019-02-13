@@ -71,8 +71,9 @@
 
 			<p>Any use of terms marked <span class="status draft">[draft]</span> should be considered experimental.</p>
 
-			<p>Deprecated term are identified by the label <span class="status deprecated">[deprecated]</span>. These
-				terms are no longer recommended for use.</p>
+			<p>Deprecated terms are identified by the label <span class="status deprecated">[deprecated]</span>. These
+				terms are no longer recommended for use in any context (refer to individual terms for additional
+				restrictions on their use in specific contexts, such as in HTML).</p>
 		</section>
 		<section id="about" class="inoformative">
 			<h2>About this vocabulary</h2>
@@ -2389,7 +2390,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2404,7 +2405,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2419,7 +2420,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2440,7 +2441,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2455,7 +2456,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2477,7 +2478,7 @@
 				</dd>
 				<dd>
 					<p>
-						<span class="subproplabel">HTML usage context: </span>Deprecated</p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
 				</dd>
 				<dd>
 					<p>
@@ -2485,6 +2486,27 @@
 							href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
 							href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an
 						escapable or skippable figure.</p>
+				</dd>
+			</dl>
+		</section>
+		<section id="asides" about="#asides" typeof="rdf:Bag">
+			<h2 about="#figures" rev="dcterms:title">Asides</h2>
+
+			<dl about="#asides" rev="rdfs:member">
+				<dt id="aside" about="#aside" typeof="rdf:Property">aside</dt>
+				<dd about="#aside" property="rdfs:comment" datatype="xsd:string">
+					<p>Secondary or supplementary content.</p>
+				</dd>
+				<dd>
+					<p>
+						<span class="subproplabel">HTML usage context: </span>Not Allowed</p>
+				</dd>
+				<dd>
+					<p>
+						<span class="subproplabel">Media Overlays usage context: </span>Identifies a <a
+							href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem">seq</a> or <a
+							href="http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem">par</a> as an
+						escapable or skippable aside.</p>
 				</dd>
 			</dl>
 		</section>
