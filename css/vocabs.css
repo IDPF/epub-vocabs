@@ -11,3 +11,9 @@ div.history {
     margin-top: 2em;
     margin-bottom: 2em
 }
+
+div.warn {
+	border: 0.15em solid red;
+	padding-left: 1rem;
+	margin-bottom: 2rem;
+}
