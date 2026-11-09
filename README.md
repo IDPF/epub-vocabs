@@ -1,3 +1,9 @@
+> [!WARNING]
+> **This repository is archived.** 
+>
+> Vocabularies are maintained in the [EPUB 3](https://www.w3.org/TR/epub/#app-vocabs) W3C Recommendation.
+
+
 # EPUB Vocabularies
 
 This repository contains vocabularies created for use with EPUB Publications.
